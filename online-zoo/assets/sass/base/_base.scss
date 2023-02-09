@@ -16,6 +16,6 @@ a {
   @extend %transition;
   cursor: pointer;
   &:hover {
-    color: $color-prim;
+    color: $color-link;
   }
 }

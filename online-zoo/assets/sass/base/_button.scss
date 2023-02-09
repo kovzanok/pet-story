@@ -1,0 +1,14 @@
+.button {
+  @extend %transition;
+  cursor: pointer;
+  color: $color-light;
+  background: $color-prim;
+  @include font($size: 1.6rem, $height: 2.2rem, $weight: 500);
+  text-transform: uppercase;
+  padding: 16px 89px 16px 95px;
+  border-radius: 25px;
+  border: none;
+  &:hover {
+    background: $color-hover;
+  }
+}

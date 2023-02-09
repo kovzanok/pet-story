@@ -8,10 +8,8 @@
 }
 
 .navigation__link {
-  
   &_active {
     cursor: default;
-    color: $color-prim;
+    color: $color-link;
   }
-  
 }

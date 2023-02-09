@@ -1,0 +1,30 @@
+.header{
+    background-color: $color-header;
+    color: $color-light;
+}
+
+.header__logo{
+    padding-top: 8px;
+    
+}
+
+.header__wrapper{
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 13px;
+}
+
+.header__nav{
+    padding-left: 34px;
+    padding-top: 7px;
+}
+
+.header__design{
+    @include font($size: 1.6rem, $height: 2.2rem, $weight: 500);
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-left: 10px;
+}

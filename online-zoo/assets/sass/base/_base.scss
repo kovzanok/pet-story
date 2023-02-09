@@ -1,0 +1,21 @@
+html {
+  font-size: 10px;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link {
+  @extend %transition;
+  cursor: pointer;
+  &:hover {
+    color: $color-prim;
+  }
+}

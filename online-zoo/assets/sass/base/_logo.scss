@@ -1,0 +1,20 @@
+.logo {
+  position: relative;
+  border: 1px solid $color-light;
+  border-radius: 2px;
+  display: inline-block;
+  width: 82px;
+  text-align: center;
+  padding: 2px 5px;
+}
+
+.logo__title {
+  display: inline-block;
+  @include font($size: 1.9rem, $height: 2.3rem);
+}
+
+.logo__icon {
+  position: absolute;
+  bottom: 7px;
+  left: 9px;
+}

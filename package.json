@@ -1,0 +1,11 @@
+{
+  "name": "online-zoo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "style": "sass --watch pages/main/style.scss pages/main/style.css "
+  },
+  "author": "",
+  "license": "ISC"
+}

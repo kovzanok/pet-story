@@ -1,4 +1,4 @@
-.link {
+.button, .link {
   transition: all 0.3s ease-out;
 }
 
@@ -58,6 +58,10 @@ main {
  */
 h1 {
   font-size: 2em;
+  margin: 0;
+}
+
+h2 {
   margin: 0;
 }
 
@@ -385,6 +389,64 @@ ul {
 .navigation__link_active {
   cursor: default;
   color: orange;
+}
+
+.button {
+  cursor: pointer;
+  color: #FFFFFF;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  padding: 16px 89px 16px 95px;
+  border-radius: 25px;
+  border: none;
+}
+.button:hover {
+  background: #E47209;
+}
+
+.watch {
+  background-image: url("../img/background-panda.jpg");
+  background-position-y: -76px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.watch__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 101px;
+}
+
+.watch__title-block {
+  position: relative;
+  width: 500px;
+  text-align: center;
+  padding-top: 84px;
+}
+
+.watch__image {
+  position: absolute;
+  left: -72px;
+  top: 13px;
+}
+
+.watch__title {
+  position: relative;
+  padding-bottom: 62px;
+  font-size: 10.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 8rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.watch__title_colored {
+  color: #FFEE2E;
 }
 
 .header {

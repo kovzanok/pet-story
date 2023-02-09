@@ -1,0 +1,42 @@
+.watch {
+  background-image: url("../img/background-panda.jpg");
+  background-position-y: -76px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.watch__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-bottom: 101px;
+}
+
+.watch__title-block {
+  position: relative;
+  width: 500px;
+  text-align: center;
+  padding-top: 84px;
+  
+}
+
+.watch__image {
+  position: absolute;
+  left: -72px;
+  top: 13px;
+}
+.watch__title {
+  position: relative;
+  padding-bottom: 62px;
+  @include font($size: 10.6rem, $height: 8rem, $weight: 700);
+  text-transform: uppercase;
+  color: $color-light;
+  &_colored {
+    color: $color-text-highlight;
+  }
+}
+
+
+.watch__button{
+    
+}

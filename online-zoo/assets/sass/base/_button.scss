@@ -11,4 +11,7 @@
   &:hover {
     background: $color-hover;
   }
+  &:active{
+    background: $color-active;
+  }
 }

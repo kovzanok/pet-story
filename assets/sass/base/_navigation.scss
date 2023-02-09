@@ -1,0 +1,17 @@
+.navigation {
+  @include font($size: 1.6rem, $height: 2.2rem, $weight: 500);
+  display: flex;
+}
+
+.navigation__item {
+  margin: 0 29px;
+}
+
+.navigation__link {
+  
+  &_active {
+    cursor: default;
+    color: $color-prim;
+  }
+  
+}

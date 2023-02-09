@@ -14,8 +14,9 @@
 
 //Components
 @import './components/watch';
+@import './components/backstage';
 
 //Layouts
-
+@import './layouts/columns';
 @import './layouts/header';
 @import './layouts/wrapper';

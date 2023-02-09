@@ -1,5 +1,11 @@
-.button, .link {
+.link {
   transition: all 0.3s ease-out;
+}
+
+.layout-2-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 html {
@@ -61,7 +67,7 @@ h1 {
   margin: 0;
 }
 
-h2 {
+h2, h3, h4, h5 {
   margin: 0;
 }
 
@@ -410,7 +416,7 @@ ul {
 
 .watch {
   background-image: url("../img/background-panda.jpg");
-  background-position-y: -76px;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -447,6 +453,51 @@ ul {
 }
 .watch__title_colored {
   color: #FFEE2E;
+}
+
+.backstage {
+  background-image: url("../img/leaves.png");
+  background-repeat: no-repeat;
+  background-position: top 12px right 0px;
+}
+
+.backstage__wrapper {
+  padding-top: 140px;
+  padding-bottom: 50px;
+}
+
+.backstage__image {
+  background-image: url("../img/man.jpg");
+  background-repeat: no-repeat;
+  flex-basis: 60%;
+}
+
+.backstage__info {
+  flex-basis: 40%;
+}
+
+.backstage__title {
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 5.7rem;
+}
+
+.backstage__subtitle {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+  padding-top: 38px;
+  padding-bottom: 21px;
+}
+
+.backstage__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.1rem;
+  padding-top: 6px;
 }
 
 .header {

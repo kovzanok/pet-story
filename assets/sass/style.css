@@ -413,6 +413,9 @@ ul {
 .button:hover {
   background: #E47209;
 }
+.button:active {
+  background: #4B9200;
+}
 
 .watch {
   background-image: url("../img/background-panda.jpg");
@@ -498,6 +501,156 @@ ul {
   font-weight: 400;
   line-height: 2.1rem;
   padding-top: 6px;
+}
+
+.pets {
+  position: relative;
+}
+
+.pets__wrapper {
+  padding-top: 98px;
+  padding-bottom: 101px;
+}
+
+.pets__card-wrapper {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  cursor: pointer;
+  max-width: 366px;
+  height: 426px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1px;
+}
+.pets__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+
+.card__image {
+  width: 100%;
+  height: 366px;
+  border-radius: 5px 5px 0px 0px;
+}
+.card__image_panda {
+  background-image: url("../img/panda.png");
+}
+.card__image_eagle {
+  background-image: url("../img/eagle.png");
+}
+.card__image_gorilla {
+  background-image: url("../img/gorilla.png");
+}
+.card__image_cheetah {
+  background-image: url("../img/cheetah.png");
+}
+.card__image_sloth {
+  background-image: url("../img/sloth.png");
+}
+.card__image_penguin {
+  background-image: url("../img/penguin.png");
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card__text {
+  padding-left: 14px;
+  padding-top: 7px;
+}
+
+.card__title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  padding-bottom: 1px;
+}
+
+.card__country {
+  margin: 0;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.8rem;
+}
+
+.card__food {
+  width: 56px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card__food_fruits {
+  background-image: url("../icons/banana-bamboo_icon.png");
+}
+.card__food_meat {
+  background-position: top 6px left 0px;
+  background-image: url("../icons/meet-fish_icon.png");
+}
+
+.pets__button-block {
+  display: flex;
+  justify-content: center;
+  padding-top: 81px;
+}
+
+.pets__button {
+  padding: 16px 53px 16px 59px;
+}
+
+.pets__slider-buttons {
+  position: absolute;
+  top: 518px;
+  width: 82.8%;
+  left: 8.5%;
+}
+
+.slider-button {
+  position: absolute;
+  width: 62px;
+  padding: 0;
+  height: 62px;
+  border-radius: 50%;
+}
+.slider-button_left {
+  left: 0;
+}
+.slider-button_right {
+  right: 0;
+}
+
+.pets__background-images {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.backgroound-images__flower {
+  height: 60%;
+}
+
+.layout-3-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.layout-3-columns > * {
+  flex-basis: 31.6%;
+}
+.layout-3-columns > * {
+  margin-top: 18px;
 }
 
 .header {

@@ -1,3 +1,10 @@
 .layout-2-columns{
     @extend %columns;
 }
+
+.layout-3-columns{
+    @include columns($width: 31.6%);
+    >*{
+        margin-top: 18px;
+    }
+}

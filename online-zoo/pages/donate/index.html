@@ -110,7 +110,7 @@
               <div class="donation-info__feeding-range">
                 <div class="feeding-range__title">Amount</div>
                 <div class="feeding-range__range">
-                  <div class="range__line">
+                  <div class="range__line range__line_hidden">
                     <div class="range__circle">
                       <div class="range__circle_inner"></div>
                     </div>
@@ -136,7 +136,9 @@
                       <div class="range__circle_inner"></div>
                     </div>
                   </div>
+                  <div class="range__line range__line_active"></div>
                 </div>
+                
                 <ul class="feeding-range__amount">
                   <li class="amount__money">$5000</li>
                   <li class="amount__money">$2000</li>
@@ -154,7 +156,7 @@
                     type="number"
                     class="feed-form__input"
                     placeholder="Another amount"
-                    max="9999"
+                    value="100"
                   />
                   <div class="feed-form__options">
                     <div class="option">

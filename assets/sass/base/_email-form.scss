@@ -1,0 +1,51 @@
+.form__title {
+  @include font($size: 2.4rem, $height: 2.9rem);
+  margin-bottom: 13px;
+}
+
+.email-form {
+  display: flex;
+  justify-content: space-between;
+  height: 42px;
+  border-radius: 2px;
+  @include font($size: 1.6rem, $height: 2.2rem);
+}
+
+.email-form__input {
+  flex-basis: 62%;
+  color: $color-person-info;
+  background-color: inherit;
+  padding: 5px 8px 0;
+  border: 0.7px solid orange;
+  border-radius: 2px;
+  outline: 0;
+
+  &:focus {
+    + .email-form__submit {
+      border-color: $color-active;
+      color: $color-active;
+    }
+    border-color: $color-active;
+  }
+  &:valid {
+    + .email-form__submit {
+      color: $color-header;
+      border-color: $color-default;
+    }
+  }
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    + .email-form__submit {
+      border-color: $color-invalid;
+      color: $color-invalid;
+    }
+    border-color: $color-invalid;
+  }
+}
+
+.email-form__submit {
+  flex-basis: 35%;
+  color: $color-header;
+  background-color: $color-submit-background;
+  border: 1px solid $color-default;
+  border-radius: 5px;
+}

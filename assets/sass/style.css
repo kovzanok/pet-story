@@ -6,13 +6,13 @@
   transition: all 0.8s ease-out;
 }
 
-.layout-2-columns {
+.layout-2-columns-numbers, .layout-2-columns {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.pick__content {
+.feed__donation-info, .pick__content {
   background: rgba(253, 253, 255, 0.52);
   backdrop-filter: blur(2px);
 }
@@ -36,7 +36,7 @@ a {
   cursor: pointer;
 }
 .link:hover {
-  color: orange;
+  color: #ffa500;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -404,7 +404,7 @@ ul {
 
 .navigation__link_active {
   cursor: default;
-  color: orange;
+  color: #ffa500;
 }
 
 .button {
@@ -434,8 +434,7 @@ ul {
   border-radius: 5px;
   display: flex;
 }
-
-input[type=range] {
+.progress-bar__wrapper input[type=range] {
   align-self: center;
   width: 100%;
   -webkit-appearance: none;
@@ -444,8 +443,7 @@ input[type=range] {
   border-radius: 5px;
   background-color: #f5f7f6;
 }
-
-input[type=range]::-webkit-slider-thumb {
+.progress-bar__wrapper input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   height: 6px;
   width: 115px;
@@ -455,14 +453,13 @@ input[type=range]::-webkit-slider-thumb {
   box-shadow: 0 0 2px 0 #555;
   transition: background 0.3s ease-in-out;
 }
-input[type=range]::-webkit-slider-thumb:hover {
+.progress-bar__wrapper input[type=range]::-webkit-slider-thumb:hover {
   background: #e47209;
 }
-input[type=range]::-webkit-slider-thumb:active {
+.progress-bar__wrapper input[type=range]::-webkit-slider-thumb:active {
   background: #4b9200;
 }
-
-input[type=range]::-webkit-slider-runnable-track {
+.progress-bar__wrapper input[type=range]::-webkit-slider-runnable-track {
   -webkit-appearance: none;
   box-shadow: none;
   border: none;
@@ -638,6 +635,202 @@ input[type=range]::-webkit-slider-runnable-track {
 .card__food_meat {
   background-position: top 6px left 0px;
   background-image: url("../icons/meet-fish_icon.png");
+}
+
+.feeding-range__title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+  padding: 0 5px 18px;
+}
+
+.feeding-range__range {
+  width: 100%;
+  height: 27px;
+  border-radius: 2px;
+  background-color: #404950;
+  padding: 0 18px 0 17px;
+  display: flex;
+  align-items: center;
+}
+
+.range__line {
+  height: 2px;
+  width: 100%;
+  background-color: #72828E;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.range__circle {
+  padding: 10px;
+  cursor: pointer;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.range__circle_inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-position: center;
+  background-color: #FFEE2E;
+}
+.range__circle:hover .range__circle_inner {
+  background-color: #4b9200;
+}
+
+.feeding-range__amount {
+  display: flex;
+  justify-content: space-between;
+}
+.feeding-range__amount > * {
+  flex-basis: 12.5%;
+}
+
+.amount__money {
+  font-size: 2.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 3.6rem;
+}
+.amount__money:nth-child(2) {
+  padding-left: 5px;
+}
+.amount__money:nth-child(3) {
+  padding-left: 13px;
+}
+.amount__money:nth-child(4) {
+  padding-left: 21px;
+}
+.amount__money:nth-child(5) {
+  padding-left: 30px;
+}
+.amount__money:nth-child(6) {
+  padding-left: 37px;
+}
+.amount__money:nth-child(7) {
+  padding-left: 45px;
+}
+.amount__money:last-child {
+  padding-left: 52px;
+}
+
+.feed-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+
+.feed-form__input {
+  color: #929699;
+  padding-left: 8px;
+  width: 27.3%;
+  height: 54px;
+  border-radius: 2px;
+  border: 1px solid #929699;
+  background: none;
+  outline: none;
+  background-repeat: no-repeat;
+  background-position: right 8px bottom 17px;
+  background-image: url("../icons/dollar.svg");
+}
+.feed-form__input:focus {
+  background-image: url("../icons/green-dollar.svg");
+  border-color: #4b9200;
+}
+
+.feed-form__options {
+  padding: 23px 56px 31px 32px;
+  width: 28%;
+  display: flex;
+  justify-content: space-between;
+}
+.feed-form__options input[type=radio] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #fe9013;
+}
+.feed-form__options input[type=radio]:checked {
+  background-color: #4b9200;
+  border-color: #4b9200;
+}
+.feed-form__options label {
+  padding-left: 9px;
+  color: #333B41;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.feed-form__button {
+  padding: 16px 68px 16px 78px;
+}
+
+.form__title {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.9rem;
+  margin-bottom: 13px;
+}
+
+.email-form {
+  display: flex;
+  justify-content: space-between;
+  height: 42px;
+  border-radius: 2px;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+
+.email-form__input {
+  flex-basis: 62%;
+  color: #bdbdbd;
+  background-color: inherit;
+  padding: 5px 8px 0;
+  border: 0.7px solid orange;
+  border-radius: 2px;
+  outline: 0;
+}
+.email-form__input:focus {
+  border-color: #4b9200;
+}
+.email-form__input:focus + .email-form__submit {
+  border-color: #4b9200;
+  color: #4b9200;
+}
+.email-form__input:valid + .email-form__submit {
+  color: black;
+  border-color: #333B41;
+}
+.email-form__input:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #D31414;
+}
+.email-form__input:invalid:not(:focus):not(:placeholder-shown) + .email-form__submit {
+  border-color: #D31414;
+  color: #D31414;
+}
+
+.email-form__submit {
+  flex-basis: 35%;
+  color: black;
+  background-color: #F1F3F2;
+  border: 1px solid #333B41;
+  border-radius: 5px;
 }
 
 .watch {
@@ -959,6 +1152,154 @@ input[type=range]::-webkit-slider-runnable-track {
   padding-top: 22px;
 }
 
+.feed {
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+}
+
+.feed__wrapper {
+  padding-top: 39px;
+  padding-bottom: 180px;
+}
+
+.feed__brief {
+  color: #ffffff;
+}
+
+.brief__title {
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4.6rem;
+}
+
+.brief__text {
+  margin-top: 10px;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.2rem;
+}
+.brief__text_regular {
+  font-weight: 400;
+}
+
+.feed__donation-info {
+  border-radius: 20px;
+}
+
+.donation-info__content {
+  padding: 40px 92px 62px;
+}
+
+.donation-info__title {
+  color: #fe9013;
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4.7rem;
+  margin: 49px 0px 59px;
+}
+
+.donation-info__subtitle {
+  color: #fe9013;
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 5.76rem;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.donation-info__text {
+  color: #333b41;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+.donation-info__diet {
+  max-width: 600px;
+  margin: 0 auto;
+  height: 250px;
+  margin-top: 54px;
+  margin-bottom: 46px;
+}
+
+.diet__numbers {
+  flex-basis: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numbers__ammount {
+  color: black;
+  font-size: 7.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 5.7rem;
+}
+
+.numbers__info {
+  display: flex;
+  height: 91px;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 55px;
+}
+
+.numbers__for-day {
+  color: #333b41;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+}
+
+.numbers__per {
+  width: 28px;
+  background-image: url("../icons/x.png");
+  background-repeat: no-repeat;
+  background-position: left 11px bottom 104px;
+}
+
+.diet__animal {
+  flex-basis: 60%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: url("../icons/panda-diet.png");
+  background-position: center;
+}
+
+.donation-info__form {
+  padding-top: 42px;
+}
+
+.donation-info__postsciption {
+  color: #333b41;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+  padding-top: 31px;
+  text-align: center;
+}
+
+.panda {
+  width: 100%;
+  height: 388px;
+  background-image: url("../img/background-panda.jpg");
+  background-position: center;
+}
+
+.layout-2-columns {
+  height: 100%;
+}
+
 .layout-2-columns-footer {
   display: flex;
   flex-wrap: wrap;
@@ -966,6 +1307,10 @@ input[type=range]::-webkit-slider-runnable-track {
 }
 .layout-2-columns-footer > * {
   flex-basis: 31.6%;
+}
+
+.layout-2-columns-numbers {
+  height: 100%;
 }
 
 .layout-3-columns {
@@ -1111,61 +1456,6 @@ input[type=range]::-webkit-slider-runnable-track {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.form__title {
-  font-size: 2.4rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.9rem;
-  margin-bottom: 13px;
-}
-
-.email-form {
-  display: flex;
-  justify-content: space-between;
-  height: 42px;
-  border-radius: 2px;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 2.2rem;
-}
-
-.email-form__input {
-  flex-basis: 62%;
-  color: #bdbdbd;
-  background-color: inherit;
-  padding: 5px 8px 0;
-  border: 0.7px solid orange;
-  border-radius: 2px;
-  outline: 0;
-}
-.email-form__input:focus {
-  border-color: #4b9200;
-}
-.email-form__input:focus + .email-form__submit {
-  border-color: #4b9200;
-  color: #4b9200;
-}
-.email-form__input:valid + .email-form__submit {
-  color: black;
-  border-color: #333B41;
-}
-.email-form__input:invalid:not(:focus):not(:placeholder-shown) {
-  border-color: #D31414;
-}
-.email-form__input:invalid:not(:focus):not(:placeholder-shown) + .email-form__submit {
-  border-color: #D31414;
-  color: #D31414;
-}
-
-.email-form__submit {
-  flex-basis: 35%;
-  color: black;
-  background-color: #F1F3F2;
-  border: 1px solid #333B41;
-  border-radius: 5px;
 }
 
 .footer__design {

@@ -7,3 +7,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+%pick__content-background {
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+}

@@ -17,10 +17,12 @@
 
 .backstage__info {
   flex-basis: 40%;
+  color: $color-text;
 }
 
 .backstage__title {
   @include font($size: 4.8rem, $height: 5.7rem);
+ 
 }
 
 .backstage__subtitle {

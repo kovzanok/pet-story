@@ -2,6 +2,11 @@
     @extend %columns;
 }
 
+.layout-2-columns-footer{
+    @include columns($width: 31.6%);
+    
+}
+
 .layout-3-columns{
     @include columns($width: 31.6%);
     >*{

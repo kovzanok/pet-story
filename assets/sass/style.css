@@ -767,6 +767,7 @@ ul {
 .feed-form__options label {
   padding-left: 9px;
   color: #333B41;
+  cursor: pointer;
 }
 
 .option {
@@ -826,6 +827,7 @@ ul {
 }
 
 .email-form__submit {
+  cursor: pointer;
   flex-basis: 35%;
   color: black;
   background-color: #F1F3F2;

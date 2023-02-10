@@ -43,6 +43,7 @@
 }
 
 .email-form__submit {
+  cursor: pointer;
   flex-basis: 35%;
   color: $color-header;
   background-color: $color-submit-background;

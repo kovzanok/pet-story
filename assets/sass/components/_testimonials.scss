@@ -1,0 +1,24 @@
+.testimonials{
+  background-image: url('../img/leaf.png');
+  background-repeat: no-repeat;
+  background-position: bottom -134px right 0px;
+}
+
+
+.testimonials__wrapper {
+  padding-top: 142px;
+  padding-bottom: 181px;;
+}
+
+.testimonials__title {
+  @include font($size: 3.6rem, $height: 4.7rem);
+  text-align: center;
+}
+
+
+
+.testimonials__progress-bar {
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+}

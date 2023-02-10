@@ -2,6 +2,10 @@
   transition: all 0.3s ease-out;
 }
 
+%slow-transition {
+  transition: all 0.8s ease-out;
+}
+
 %columns {
   display: flex;
   flex-wrap: wrap;

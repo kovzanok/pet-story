@@ -58,6 +58,13 @@
   text-align: center;
 }
 
+.pick__layout-5-columns{
+    @include columns($width: 10%);
+    >*{
+        margin-top: 40px;
+    }
+}
+
 .procedure__image-wrapper {
   background: $color-prim;
   width: 168px;
@@ -100,4 +107,12 @@
 
 .pick__button{
     padding: 16px 72px 16px 74px;
+}
+
+
+.arrow{
+    height: 36px;
+    align-self: center;
+    margin: 0 0 48px;
+    
 }

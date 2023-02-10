@@ -1,0 +1,63 @@
+.testimonial__wrapper {
+    background: $color-testimonial-border;
+    width: 268px;
+    height: 391px;
+    border-radius: 20px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .testimonial {
+    background: $color-testimonial-background;
+    border-radius: 20px;
+    height: 100%;
+    padding: 15px 13px 15px 15px;
+  }
+  
+  .testimonial__profile {
+    display: flex;
+  }
+  
+  .profile__pic {
+    width: 37px;
+    height: 37px;
+    background-image: url("../icons/user_icon.png");
+  }
+  
+  .profile__info {
+    @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
+    padding-left: 8px;
+  }
+  
+  .person-info {
+    color: $color-person-info;
+  }
+  .person-name {
+    @include font($size: 1.6rem, $height: 1.9rem);
+  }
+  
+  .person-location {
+    padding-right: 6px;
+  }
+  
+  .testimonial__comment {
+    color: $color-testimonial-comment;
+    @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
+  }
+  
+  .comment__paragraph {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+
+  .testimonials__button-block{
+    padding-top: 30px;
+  }
+
+  .testimonials__button{
+    border-radius: 5px;
+    padding: 16px 82px 17px 85px;
+  }

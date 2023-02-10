@@ -8,3 +8,15 @@
         margin-top: 18px;
     }
 }
+
+.pick__layout-3-columns{
+    @include columns($width: 22%);
+    >*{
+        margin-top: 40px;
+    }
+}
+
+.layout-3-columns__wrapper{
+    max-width: 764px;
+    margin: 0 auto;
+}

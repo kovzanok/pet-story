@@ -8,6 +8,11 @@
   justify-content: space-between;
 }
 
+.pick__content {
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+}
+
 html {
   font-size: 10px;
 }
@@ -358,7 +363,7 @@ ul {
 
 .logo {
   position: relative;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   border-radius: 2px;
   display: inline-block;
   width: 82px;
@@ -399,8 +404,8 @@ ul {
 
 .button {
   cursor: pointer;
-  color: #FFFFFF;
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  color: #ffffff;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   font-size: 1.6rem;
   font-style: normal;
   font-weight: 500;
@@ -411,10 +416,10 @@ ul {
   border: none;
 }
 .button:hover {
-  background: #E47209;
+  background: #e47209;
 }
 .button:active {
-  background: #4B9200;
+  background: #4b9200;
 }
 
 .watch {
@@ -452,10 +457,10 @@ ul {
   font-weight: 700;
   line-height: 8rem;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .watch__title_colored {
-  color: #FFEE2E;
+  color: #ffee2e;
 }
 
 .backstage {
@@ -477,6 +482,7 @@ ul {
 
 .backstage__info {
   flex-basis: 40%;
+  color: #333B41;
 }
 
 .backstage__title {
@@ -513,7 +519,7 @@ ul {
 }
 
 .pets__card-wrapper {
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
   cursor: pointer;
   max-width: 366px;
   height: 426px;
@@ -528,7 +534,7 @@ ul {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 5px;
 }
 
@@ -641,6 +647,129 @@ ul {
   height: 60%;
 }
 
+.pick {
+  background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
+  color: #333B41;
+}
+
+.pick__wrapper {
+  padding-top: 67px;
+  padding-bottom: 98px;
+}
+
+.pick__content {
+  border-radius: 20px;
+}
+
+.content__text {
+  padding-top: 41px;
+  padding-left: 99px;
+}
+
+.pick__title {
+  color: #FE9013;
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 5.8rem;
+  text-align: center;
+  width: 91%;
+}
+
+.first-line {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.9rem;
+  margin: 32px 0px 39px;
+}
+
+.second-line {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.1rem;
+  margin-bottom: 9px;
+}
+
+.third-line {
+  margin: 0;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.1rem;
+  width: 82%;
+}
+
+.pick__link {
+  position: relative;
+}
+.pick__link::after {
+  position: absolute;
+  content: "";
+  top: 23px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: #FE9013;
+}
+
+.pick__subtitle {
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 4.7rem;
+  width: 90.3%;
+  padding-top: 62px;
+  text-align: center;
+}
+
+.procedure__image-wrapper {
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  width: 168px;
+  height: 168px;
+  padding: 1px;
+  border-radius: 5px;
+}
+
+.procedure__image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+.procedure__image_background {
+  background-color: #ffffff;
+}
+.procedure__image_pay {
+  background-image: url("../icons/pay.png");
+}
+.procedure__image_zoo {
+  background-image: url("../icons/zoo.png");
+}
+.procedure__image_animal {
+  background-image: url("../icons/animal.png");
+}
+
+.procedure__name {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+  margin-top: 30px;
+}
+
+.pick__button-block {
+  text-align: center;
+  padding-top: 62px;
+  padding-bottom: 59px;
+}
+
+.pick__button {
+  padding: 16px 72px 16px 74px;
+}
+
 .layout-3-columns {
   display: flex;
   flex-wrap: wrap;
@@ -653,9 +782,26 @@ ul {
   margin-top: 18px;
 }
 
+.pick__layout-3-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pick__layout-3-columns > * {
+  flex-basis: 22%;
+}
+.pick__layout-3-columns > * {
+  margin-top: 40px;
+}
+
+.layout-3-columns__wrapper {
+  max-width: 764px;
+  margin: 0 auto;
+}
+
 .header {
   background-color: black;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .header__logo {

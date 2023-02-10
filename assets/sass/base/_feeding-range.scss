@@ -20,9 +20,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &_hidden {
+    background-color: $color-feed-range;
+  }
+
+  &_active{
+    width: 79%;
+    position: absolute;
+    z-index: 1;
+    left: 10.4%;
+  }
 }
 
 .range__circle {
+  position: relative;
+  z-index: 2;
   padding: 10px;
   cursor: pointer;
   display: inline-block;

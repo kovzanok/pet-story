@@ -11,12 +11,16 @@
 @import './base/logo';
 @import './base/navigation';
 @import './base/button';
+@import './base/progress-bar';
+@import './base/testimonial';
+@import './base/card';
 
 //Components
 @import './components/watch';
 @import './components/backstage';
 @import './components/pets';
 @import './components/pick';
+@import './components/testimonials';
 
 //Layouts
 @import './layouts/columns';

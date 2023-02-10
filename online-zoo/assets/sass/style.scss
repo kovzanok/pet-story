@@ -14,6 +14,9 @@
 @import './base/progress-bar';
 @import './base/testimonial';
 @import './base/card';
+@import './base/feeding-range';
+@import './base/feed-form';
+@import './base/email-form';
 
 //Components
 @import './components/watch';
@@ -21,6 +24,8 @@
 @import './components/pets';
 @import './components/pick';
 @import './components/testimonials';
+@import './components/feed';
+@import './components/panda';
 
 //Layouts
 @import './layouts/columns';

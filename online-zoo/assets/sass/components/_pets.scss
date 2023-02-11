@@ -7,8 +7,12 @@
   z-index: 3;
   padding-top: 98px;
   padding-bottom: 101px;
-  @include media-laptop{
+  @include media-laptop {
     padding-bottom: 138px;
+  }
+  @include media-tablet {
+    padding-top: 22px;
+    padding-bottom: 99px;
   }
 }
 
@@ -22,19 +26,23 @@
   align-items: center;
   border-radius: 5px;
   padding: 1px;
-  
-  @include media-add-laptop{
-      height: 355px;
-      justify-content: space-between;
+
+  @include media-add-laptop {
+    height: 355px;
+    justify-content: space-between;
+  }
+  @include media-tablet {
+    height: 333px;
   }
 }
-
-
 
 .pets__button-block {
   display: flex;
   justify-content: center;
   padding-top: 81px;
+  @include media-tablet {
+    padding-top: 58px;
+  }
 }
 
 .pets__button {
@@ -47,10 +55,15 @@
   width: 82.8%;
   height: 62px;
   left: 8.5%;
-  @include media-add-laptop{
+  @include media-add-laptop {
     top: 485px;
     left: 35%;
     width: 30%;
+  }
+  @include media-tablet {
+    top: 383px;
+    left: 38%;
+    width: 24%;
   }
 }
 
@@ -66,36 +79,40 @@
   }
   &_right {
     right: 0;
-    
   }
 }
 
-
-.pets__background-images{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    height: 290px;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
+.pets__background-images {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 290px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 }
 
-.backgroound-images__palm{
+.backgroound-images__palm {
   position: absolute;
   left: -150px;
   bottom: 0;
   height: 160%;
-  @include media-add-laptop{
+  @include media-add-laptop {
     left: 0;
     height: auto;
   }
+  @include media-tablet{
+    left: -60px;
+  }
 }
 
-.backgroound-images__flower{
+.backgroound-images__flower {
   position: absolute;
-    
-    width: 23%;
-    right: 0;
-    bottom: 0;
+
+  width: 23%;
+  right: 0;
+  bottom: 0;
+  @include media-tablet{
+    width: 28%;
+  }
 }

@@ -8,8 +8,8 @@
 }
 
 .layout-2-columns-numbers {
-    @extend %columns;
-    height: 100%;
+  @extend %columns;
+  height: 100%;
 }
 
 .layout-3-columns {
@@ -17,10 +17,24 @@
   > * {
     margin-top: 18px;
   }
-  @include media-add-laptop{
+  @include media-add-laptop {
     @include columns($width: 31.4%);
-    >.pets__card-wrapper:nth-child(4),:nth-child(5),:nth-child(6) {
+    > .pets__card-wrapper:nth-child(4),
+    :nth-child(5),
+    :nth-child(6) {
       margin-top: 92px;
+    }
+  }
+
+  @include media-tablet {
+    @include columns($width: 47.5%);
+    > .pets__card-wrapper:nth-child(3),
+    :nth-child(4) {
+      margin-top: 92px;
+    }
+    > .pets__card-wrapper:nth-child(5),
+    :nth-child(6) {
+      display: none;
     }
   }
 }
@@ -28,10 +42,10 @@
 .layout-4-columns {
   @include columns($width: 23%);
   padding-top: 44px;
-  @include media-laptop{
+  @include media-laptop {
     padding-top: 33px;
     @include columns($width: 31%);
-    >.testimonial__wrapper:last-child{
+    > .testimonial__wrapper:last-child {
       display: none;
     }
   }

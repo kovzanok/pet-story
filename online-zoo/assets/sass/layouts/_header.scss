@@ -7,6 +7,9 @@
 
 .header__logo{
     padding-top: 8px;
+    @include media-tablet{
+        padding: 0;
+    }
     
 }
 
@@ -15,11 +18,18 @@
     align-items: center;
     padding-top: 5px;
     padding-bottom: 13px;
+    @include media-laptop{
+        padding-top: 3px;
+        padding-bottom: 0;
+    }
 }
 
 .header__nav{
     padding-left: 34px;
     padding-top: 7px;
+    @include media-tablet{
+        display: none;
+    }
 }
 
 .header__design{
@@ -29,4 +39,7 @@
     justify-content: flex-end;
     padding-top: 10px;
     padding-left: 10px;
+    @include media-tablet{
+        display: none;
+    }
 }

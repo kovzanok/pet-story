@@ -1,105 +1,123 @@
 .pets__card {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: $color-light;
+  border-radius: 5px;
+  &:hover {
+    .card__image {
+      border-radius: 5px;
+      @extend %transition;
+      transform: scale(1.1);
+      filter: brightness(30%);
+    }
+    .card__text_hidden {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, -125px);
+    }
+  }
+}
+.card__image {
+  @extend %slow-transition;
+  width: 100%;
+  height: 366px;
+  border-radius: 5px 5px 0px 0px;
+  background-position: center;
+  background-size: cover;
+
+  &_panda {
+    background-image: url("../img/panda.png");
+  }
+  &_eagle {
+    background-image: url("../img/eagle.png");
+  }
+  &_gorilla {
+    background-image: url("../img/gorilla.png");
+  }
+  &_cheetah {
+    background-image: url("../img/cheetah.png");
+  }
+  &_sloth {
+    background-image: url("../img/sloth.png");
+  }
+  &_penguin {
+    background-image: url("../img/penguin.png");
+  }
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  @include media-laptop {
+    height: 72px;
+  }
+  @include media-tablet {
+    height: 62px;
+  }
+}
+
+.card__text {
+  @extend %slow-transition;
+  padding-left: 14px;
+  padding-top: 7px;
+  &_hidden {
+    position: absolute;
+    padding: 5px;
+    width: 160px;
+
+    text-align: center;
+    bottom: 80px;
+    left: 30%;
+    opacity: 0;
+    visibility: hidden;
     background: $color-light;
     border-radius: 5px;
-    &:hover{
-      .card__image{
-        border-radius: 5px;
-        @extend %transition;
-        transform: scale(1.1);
-        filter: brightness(30%)
-      }
-      .card__text_hidden{
-        opacity: 1;
-        visibility: visible;
-        transform: translate(0, -125px)
-      }
-    }
-    
   }
-  .card__image {
-    @extend %slow-transition;
-    width: 100%;
-    height: 366px;
-    border-radius: 5px 5px 0px 0px;
-    background-position: center;
-    
-    @include media-laptop{
-      background-size: contain;
-    }
-    &_panda {
-      background-image: url("../img/panda.png");
-    }
-    &_eagle {
-      background-image: url("../img/eagle.png");
-    }
-    &_gorilla {
-      background-image: url("../img/gorilla.png");
-    }
-    &_cheetah {
-      background-image: url("../img/cheetah.png");
-    }
-    &_sloth {
-      background-image: url("../img/sloth.png");
-    }
-    &_penguin {
-      background-image: url("../img/penguin.png");
+  @include media-tablet {
+    padding-left: 12px;
+    padding-top: 11px;
+  }
+}
+
+.card__title {
+  @include font($size: 1.6rem, $height: 2.2rem, $weight: 500);
+  text-transform: uppercase;
+  padding-bottom: 1px;
+  @include media-tablet {
+    @include font($size: 1.2rem, $weight: 500);
+  }
+}
+
+.card__country {
+  margin: 0;
+
+  @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
+  @include media-tablet {
+    @include font($size: 1.2rem, $weight: 300);
+  }
+}
+
+.card__food {
+  width: 56px;
+  background-position: center;
+  background-repeat: no-repeat;
+  &_fruits {
+    background-image: url("../icons/banana-bamboo_icon.png");
+    @include media-tablet{
+      background-size: 30px 32px;
+      background-position: top 6px left 21px;
     }
   }
-  
-  .card__info {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    @include media-laptop{
-      height: 72px;
+  &_meat {
+    background-position: top 6px left 13px;
+    background-image: url("../icons/meet-fish_icon.png");
+    @include media-tablet{
+      background-size: 40px 32px;
     }
   }
   
-  .card__text {
-    @extend %slow-transition;
-    padding-left: 14px;
-    padding-top: 7px;
-    &_hidden{
-      position: absolute;
-      padding: 5px;
-      width: 160px;
-      
-      text-align: center;
-      bottom: 80px;
-      left: 30%;
-      opacity: 0;
-      visibility: hidden;
-      background: $color-light;
-      border-radius: 5px;
-    }
-  }
-  
-  .card__title {
-    @include font($size: 1.6rem, $height: 2.2rem, $weight: 500);
-    text-transform: uppercase;
-    padding-bottom: 1px;
-  }
-  
-  .card__country {
-    margin: 0;
-  
-    @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
-  }
-  
-  .card__food {
-    width: 56px;
-    background-position: center;
-    background-repeat: no-repeat;
-    &_fruits {
-      background-image: url("../icons/banana-bamboo_icon.png");
-    }
-    &_meat {
-      background-position: top 6px left 0px;
-      background-image: url("../icons/meet-fish_icon.png");
-    }
-  }
+}

@@ -10,6 +10,10 @@
     background-size: 120px 203px;
     background-position: bottom -70px right -5px;
   }
+  @include media-mobilesmall{
+    background-size: 80px 102px;
+    background-position: bottom -37px right -8px;
+  }
 }
 
 
@@ -24,12 +28,19 @@
     padding-top: 59px;
     padding-bottom: 79px;
   }
+  @include media-mobilesmall{
+    padding-top: 32px;
+    padding-bottom: 58px;
+  }
 }
 
 
 .testimonials__title {
   @include font($size: 3.6rem, $height: 4.7rem);
   text-align: center;
+  @include media-mobilesmall{
+    @include font($size: 2.4rem,$height: 2.8rem)
+  }
 }
 
 
@@ -53,6 +64,9 @@
   @include media-tablet{
     padding-top: 38px;
     text-align: center;
+  }
+  @include media-mobilesmall{
+    padding-top: 32px;
   }
 }
 

@@ -5,6 +5,9 @@
 
 .layout-2-columns-footer {
   @include columns($width: 31.6%);
+  @include media-mobilesmall{
+    @include columns($width: 100%);
+  }
 }
 
 .layout-2-columns-numbers {
@@ -68,6 +71,9 @@
     :nth-child(3) {
       margin-top: 16px;
     }
+  }
+  @include media-mobilesmall{
+    padding-top: 19px;
   }
 }
 

@@ -20,9 +20,12 @@
     border-radius: 20px;
     height: 100%;
     padding: 15px 13px 15px 15px;
-    overflow: hidden;
+    
     @include media-testimonial{
       padding: 11px 13px 8px 15px;
+    }
+    @include media-mobilesmall{
+      
     }
   }
   
@@ -39,10 +42,14 @@
   .profile__info {
     @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
     padding-left: 8px;
+    @include media-mobilesmall{
+      padding-left: 3px;
+    }
   }
   
   .person-info {
     color: $color-person-info;
+    
   }
   .person-name {
     @include font($size: 1.6rem, $height: 1.9rem);
@@ -50,13 +57,20 @@
   
   .person-location {
     padding-right: 6px;
+    @include media-mobilesmall{
+      padding-right: 1px;
+    }
   }
   
   .testimonial__comment {
     color: $color-testimonial-comment;
+    overflow: hidden;
     @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
     @include media-testimonial{
       height: 48px;
+      
+    }
+    @include media-mobilesmall{
       
     }
   }

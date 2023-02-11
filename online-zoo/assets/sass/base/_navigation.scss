@@ -11,6 +11,9 @@
   @include media-navigation {
     margin: 0 20px;
   }
+  @include media-mobilesmall{
+    margin: 0 16px;
+  }
 }
 
 .navigation__link {

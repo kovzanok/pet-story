@@ -1,4 +1,7 @@
 .progress-bar__wrapper {
+  @include media-laptop{
+    width: 41%;
+  }
   width: 52%;
   padding: 0.5px;
   background: $color-testimonial-border;
@@ -32,6 +35,11 @@
     &:active {
       background: $color-active;
     }
+
+    @include media-laptop{
+      width: 75px;
+    }
+   
   }
 
   input[type="range"]::-webkit-slider-runnable-track {

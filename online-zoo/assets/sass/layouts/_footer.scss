@@ -7,6 +7,7 @@
   position: relative;
   padding-top: 39px;
   padding-bottom: 30px;
+  
 }
 
 .footer__button-block {
@@ -67,10 +68,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include media-laptop{
+    flex-basis: 42.4%;
+  }
 }
 
 .footer__design {
-  @include font($size: 1.6rem, $height: 2rem);
+  @include font($size: 1.6rem, $height: 2rem,$weight: 100);
   text-align: right;
   align-self: flex-end;
   width: 70%;
@@ -93,4 +97,7 @@
   position: absolute;
   bottom: 8%;
   left: 31.8%;
+  @include media-laptop{
+    left: 28%;
+  }
 }

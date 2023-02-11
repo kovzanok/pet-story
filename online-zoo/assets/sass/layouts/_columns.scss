@@ -28,6 +28,13 @@
 .layout-4-columns {
   @include columns($width: 23%);
   padding-top: 44px;
+  @include media-laptop{
+    padding-top: 33px;
+    @include columns($width: 31%);
+    >.testimonial__wrapper:last-child{
+      display: none;
+    }
+  }
 }
 
 .layout-5-columns__wrapper {

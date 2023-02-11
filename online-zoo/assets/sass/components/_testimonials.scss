@@ -2,13 +2,22 @@
   background-image: url('../img/leaf.png');
   background-repeat: no-repeat;
   background-position: bottom -134px right 0px;
+  @include media-laptop{
+    background-size: 197px 327px;
+    background-position: bottom -88px right 0px;
+  }
 }
 
 
 .testimonials__wrapper {
   padding-top: 142px;
-  padding-bottom: 181px;;
+  padding-bottom: 181px;
+  @include media-laptop{
+    padding-top: 98px;
+    padding-bottom: 137px;
+  }
 }
+
 
 .testimonials__title {
   @include font($size: 3.6rem, $height: 4.7rem);
@@ -21,4 +30,18 @@
   display: flex;
   justify-content: center;
   padding-top: 22px;
+  @include media-laptop{
+    padding-top: 19px;
+  }
+}
+
+
+
+.testimonials__button-block{
+  padding-top: 52px;
+}
+
+.testimonials__button{
+  border-radius: 5px;
+  padding: 16px 82px 17px 85px;
 }

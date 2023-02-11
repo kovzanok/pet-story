@@ -9,6 +9,9 @@
   height: 42px;
   border-radius: 2px;
   @include font($size: 1.6rem, $height: 2.2rem);
+  @include media-laptop{
+    padding-right: 33px;
+  }
 }
 
 .email-form__input {

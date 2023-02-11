@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include media-tablet{
+    @include media-testimonial{
       width: 100%;
       height: 109px;
       
@@ -20,7 +20,8 @@
     border-radius: 20px;
     height: 100%;
     padding: 15px 13px 15px 15px;
-    @include media-tablet{
+    overflow: hidden;
+    @include media-testimonial{
       padding: 11px 13px 8px 15px;
     }
   }
@@ -54,9 +55,9 @@
   .testimonial__comment {
     color: $color-testimonial-comment;
     @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
-    @include media-tablet{
+    @include media-testimonial{
       height: 48px;
-      overflow: hidden;
+      
     }
   }
   

@@ -7,14 +7,14 @@
   position: relative;
   padding-top: 39px;
   padding-bottom: 30px;
-  @include media-tablet {
+  @include media-navigation {
     padding-top: 13px;
     padding-bottom: 118px;
   }
 }
 
 .footer__left {
-  @include media-tablet {
+  @include media-navigation {
     flex-basis: 50%;
     position: relative;
   }
@@ -23,7 +23,7 @@
 .footer__button-block {
   padding-top: 71px;
   padding-bottom: 15px;
-  @include media-tablet {
+  @include media-navigation {
     padding-top: 35px;
   }
 }
@@ -40,7 +40,7 @@
   > * {
     margin-top: 6px;
   }
-  @include media-tablet {
+  @include media-navigation {
     position: absolute;
     right: -311px;
     top: -28px;
@@ -64,7 +64,7 @@
 }
 
 .socials__text {
-  @include media-tablet {
+  @include media-navigation {
     display: none;
   }
 }
@@ -98,13 +98,13 @@
   @include media-laptop {
     flex-basis: 42.4%;
   }
-  @include media-tablet{
+  @include media-navigation{
     flex-direction: column-reverse;
   }
 }
 
 .footer__form {
-  @include media-tablet {
+  @include media-navigation {
     display: none;
   }
 }
@@ -126,7 +126,7 @@
       text-decoration: underline;
     }
   }
-  @include media-tablet{
+  @include media-navigation{
     width: 90%;
     position: relative;
     top: 105px;
@@ -141,7 +141,7 @@
   @include media-laptop {
     left: 28%;
   }
-  @include media-tablet {
+  @include media-navigation {
     .navigation{
       margin: 0;
     }

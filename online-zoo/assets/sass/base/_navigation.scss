@@ -5,12 +5,12 @@
 
 .navigation__item {
   margin: 0 29px;
-  @include media-laptop{
+  @include media-laptop {
     margin: 0 25px;
-}
-@include media-tablet{
-  margin: 0 20px;
-}
+  }
+  @include media-navigation {
+    margin: 0 20px;
+  }
 }
 
 .navigation__link {

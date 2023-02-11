@@ -26,7 +26,7 @@
     }
   }
 
-  @include media-tablet {
+  @include media-navigation {
     @include columns($width: 47.5%);
     > .pets__card-wrapper:nth-child(3),
     :nth-child(4) {
@@ -49,7 +49,7 @@
       display: none;
     }
   }
-  @include media-tablet{
+  @include media-testimonial{
     flex-direction: column;
     @include columns($width: 100%);
     >.testimonial__wrapper:nth-child(2),:nth-child(3){
@@ -61,7 +61,7 @@
 .layout-5-columns__wrapper {
   max-width: 764px;
   margin: 0 auto;
-  @include media-tablet{
+  @include media-navigation{
     max-width: 568px;
     
   }

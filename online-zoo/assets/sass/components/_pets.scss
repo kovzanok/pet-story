@@ -10,7 +10,7 @@
   @include media-laptop {
     padding-bottom: 138px;
   }
-  @include media-tablet {
+  @include media-navigation {
     padding-top: 22px;
     padding-bottom: 99px;
   }
@@ -31,7 +31,7 @@
     height: 355px;
     justify-content: space-between;
   }
-  @include media-tablet {
+  @include media-navigation {
     height: 333px;
   }
 }
@@ -40,7 +40,7 @@
   display: flex;
   justify-content: center;
   padding-top: 81px;
-  @include media-tablet {
+  @include media-navigation {
     padding-top: 58px;
   }
 }
@@ -60,7 +60,7 @@
     left: 35%;
     width: 30%;
   }
-  @include media-tablet {
+  @include media-navigation {
     top: 383px;
     left: 38%;
     width: 24%;
@@ -101,7 +101,7 @@
     left: 0;
     height: auto;
   }
-  @include media-tablet{
+  @include media-navigation{
     left: -60px;
   }
 }
@@ -112,7 +112,7 @@
   width: 23%;
   right: 0;
   bottom: 0;
-  @include media-tablet{
+  @include media-navigation{
     width: 28%;
   }
 }

@@ -33,6 +33,14 @@
   @media (max-width: $tablet-width){@content;}
 }
 
+@mixin media-testimonial{
+  @media (max-width: $testimonial-breakpoint){@content;}
+}
+
+@mixin media-navigation{
+  @media (max-width: $navigation-breakpoint){@content;}
+}
+
 @mixin media-mobilesmall{
   @media (max-width: $mobile-small-width){@content;}
 }

@@ -6,6 +6,10 @@
       padding-left: 0;
       padding-right: 0;
     }
+    @include media-mobilesmall {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }
 
@@ -37,6 +41,10 @@
     padding-top: 9px;
     padding-left: 21px;
   }
+  @include media-mobilesmall {
+    padding-top: 19px;
+    padding-left: 9px;
+  }
 }
 .pick__title {
   color: $color-pick-title;
@@ -50,6 +58,9 @@
     @include font($size: 4.2rem, $height: 5rem);
     width: 97%;
   }
+  @include media-mobilesmall {
+    @include font($size: 2.4rem, $height: 2.8rem);
+  }
 }
 
 .first-line {
@@ -60,6 +71,12 @@
   }
   @include media-tablet {
     @include font($size: 2.2rem, $height: 2.6rem);
+  }
+  @include media-mobilesmall {
+    @include font($size: 1.8rem, $height: 2.2rem);
+    margin-top: 12px;
+    text-align: center;
+    padding: 0 10px 0 0;
   }
 }
 .second-line {
@@ -72,6 +89,9 @@
     padding-right: 16px;
     margin-bottom: 11px;
   }
+  @include media-mobilesmall {
+    display: none;
+  }
 }
 .third-line {
   margin: 0;
@@ -82,6 +102,9 @@
   }
   @include media-tablet {
     width: 100%;
+  }
+  @include media-mobilesmall {
+    display: none;
   }
 }
 
@@ -117,6 +140,10 @@
     padding-top: 30px;
     width: 97%;
   }
+  @include media-mobilesmall {
+    @include font($size: 2.4rem, $height: 2.8rem);
+    padding-top: 0;
+  }
 }
 
 .pick__layout-5-columns {
@@ -130,11 +157,20 @@
       margin-top: 20px;
     }
   }
-}
+  @include media-mobilesmall {
+    @include columns($width: 100%);
+    >.pick__procedure:first-child{
+      margin-top: 20px;
+    }
+    >.pick__procedure{
+      margin-top: 41px;
+    }
+    >.pick__procedure:last-child{
+      margin-top: 54px;
+    }
+  }
 
-.pick__procedure {
-  position: relative;
-  z-index: 1;
+  
 }
 
 
@@ -145,6 +181,9 @@
   height: 168px;
   padding: 1px;
   border-radius: 5px;
+  @include media-mobilesmall {
+    margin: 0 auto;
+  }
 }
 
 .procedure__image {
@@ -170,6 +209,11 @@
 .procedure__name {
   @include font($size: 1.6rem, $height: 2.2rem);
   margin-top: 30px;
+  @include media-mobilesmall {
+    margin-top: 10px;
+    margin-left: 22%;
+    width: 60%;
+  }
 }
 
 .pick__button-block {
@@ -183,6 +227,9 @@
   @include media-navigation {
     padding-top: 42px;
     padding-bottom: 62px;
+  }
+  @include media-mobilesmall{
+    padding-bottom: 38px;
   }
 }
 
@@ -200,16 +247,30 @@
   @include media-navigation {
     position: absolute;
     top: 0;
-    
-    z-index: 2;
-    content: url('../icons/arrow-tablet.png');
 
-    &_first{
+    z-index: 2;
+    content: url("../icons/arrow-tablet.png");
+
+    &_first {
       left: 20%;
     }
-    &_second{
+    &_second {
       left: 55%;
     }
   }
-
+  @include media-mobilesmall{
+    width: 82px;
+    height: 26px;
+    right: 0;
+    left: 70%;
+    transform:  rotate(90deg);
+    &_first {
+      top: 30%;
+      
+    }
+    &_second {
+      top: 63%;
+      
+    }
+  }
 }

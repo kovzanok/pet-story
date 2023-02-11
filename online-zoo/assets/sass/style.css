@@ -570,7 +570,11 @@ ul {
   height: 366px;
   border-radius: 5px 5px 0px 0px;
   background-position: center;
-  background-size: contain;
+}
+@media (max-width: 1160px) {
+  .card__image {
+    background-size: contain;
+  }
 }
 .card__image_panda {
   background-image: url("../img/panda.png");
@@ -947,7 +951,7 @@ ul {
   background-repeat: no-repeat;
   background-position: top 12px right 0px;
 }
-@media (max-width: 1160px) {
+@media (max-width: 1560px) {
   .backstage {
     background-image: none;
   }
@@ -1047,7 +1051,7 @@ ul {
   border-radius: 5px;
   padding: 1px;
 }
-@media (max-width: 1160px) {
+@media (max-width: 1560px) {
   .pets__card-wrapper {
     height: 355px;
     justify-content: space-between;
@@ -1071,7 +1075,7 @@ ul {
   height: 62px;
   left: 8.5%;
 }
-@media (max-width: 1160px) {
+@media (max-width: 1560px) {
   .pets__slider-buttons {
     top: 485px;
     left: 35%;
@@ -1109,7 +1113,7 @@ ul {
   bottom: 0;
   height: 160%;
 }
-@media (max-width: 1160px) {
+@media (max-width: 1560px) {
   .backgroound-images__palm {
     left: 0;
     height: auto;
@@ -1541,7 +1545,7 @@ ul {
 .layout-3-columns > * {
   margin-top: 18px;
 }
-@media (max-width: 1160px) {
+@media (max-width: 1560px) {
   .layout-3-columns {
     display: flex;
     flex-wrap: wrap;

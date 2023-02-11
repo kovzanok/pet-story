@@ -25,6 +25,10 @@
   @media (max-width: $content-width){@content;}
 }
 
+@mixin media-add-laptop{
+  @media (max-width: $laptop-breakpoint){@content;}
+}
+
 @mixin media-tablet{
   @media (max-width: $tablet-width){@content;}
 }

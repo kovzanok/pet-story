@@ -27,8 +27,10 @@
     height: 366px;
     border-radius: 5px 5px 0px 0px;
     background-position: center;
-    background-size: contain;
     
+    @include media-laptop{
+      background-size: contain;
+    }
     &_panda {
       background-image: url("../img/panda.png");
     }

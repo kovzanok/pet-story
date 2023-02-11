@@ -2,7 +2,7 @@
     background-image: url('../img/leaves.png');
     background-repeat: no-repeat;
     background-position: top 12px right 0px;
-    @include media-laptop{
+    @include media-add-laptop{
       background-image: none;
     }
 }

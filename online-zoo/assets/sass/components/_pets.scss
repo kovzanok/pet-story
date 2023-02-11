@@ -23,7 +23,7 @@
   border-radius: 5px;
   padding: 1px;
   
-  @include media-laptop{
+  @include media-add-laptop{
       height: 355px;
       justify-content: space-between;
   }
@@ -47,7 +47,7 @@
   width: 82.8%;
   height: 62px;
   left: 8.5%;
-  @include media-laptop{
+  @include media-add-laptop{
     top: 485px;
     left: 35%;
     width: 30%;
@@ -86,7 +86,7 @@
   left: -150px;
   bottom: 0;
   height: 160%;
-  @include media-laptop{
+  @include media-add-laptop{
     left: 0;
     height: auto;
   }

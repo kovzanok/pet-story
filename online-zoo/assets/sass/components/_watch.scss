@@ -9,6 +9,9 @@
   @include media-tablet {
     background-size: 778px;
   }
+  @include media-mobilesmall {
+    background-size: 393px;
+  }
 }
 
 .watch__wrapper {
@@ -23,6 +26,9 @@
   @include media-tablet {
     padding-bottom: 46px;
   }
+  @include media-mobilesmall{
+    padding-bottom:0px;
+  }
 }
 
 .watch__title-block {
@@ -33,6 +39,11 @@
   @include media-laptop {
     padding-top: 43px;
     padding-right: 10px;
+  }
+  @include media-mobilesmall{
+    padding-top: 66px;
+    padding-left: 116px;
+    padding-right: 0;
   }
 }
 
@@ -51,6 +62,11 @@
     left: 211px;
     top: 11px;
   }
+  @include media-mobilesmall {
+    width: 119px;
+    left: 354px;
+    top: 56px;
+  }
 }
 .watch__title {
   position: relative;
@@ -66,17 +82,23 @@
     @include font($size: 8.5rem, $height: 6.4rem, $weight: 700);
     padding-bottom: 42px;
   }
-  @include media-tablet{
-    @include font($size: 5.4rem,$height: 4rem,$weight:700);
+  @include media-tablet {
+    @include font($size: 5.4rem, $height: 4rem, $weight: 700);
     padding-left: 256px;
     padding-top: 8px;
+  }
+  @include media-mobilesmall {
+    @include font($size: 2.7rem, $height: 2.1rem, $weight: 700);
   }
 }
 
 .watch__button {
-  @include media-tablet{
+  @include media-tablet {
     position: absolute;
     left: -101px;
     bottom: -7px;
+  }
+  @include media-mobilesmall{
+    display: none;
   }
 }

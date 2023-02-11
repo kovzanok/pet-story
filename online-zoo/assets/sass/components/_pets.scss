@@ -1,5 +1,10 @@
 .pets {
   position: relative;
+  .wrapper{
+    @include media-mobilesmall{
+      padding: 0 16px
+    }
+  }
 }
 
 .pets__wrapper {
@@ -13,6 +18,9 @@
   @include media-navigation {
     padding-top: 22px;
     padding-bottom: 99px;
+  }
+  @include media-mobilesmall{
+    padding-top: 14px;
   }
 }
 
@@ -43,14 +51,24 @@
   @include media-navigation {
     padding-top: 58px;
   }
+  @include media-mobilesmall{
+    padding-top: 16px;
+    padding-bottom: 62px;
+  }
 }
 
 .pets__button {
   padding: 16px 53px 16px 59px;
+  @include media-mobilesmall{
+    padding: 0;
+    width: 298px;
+    height: 54px;
+  }
 }
 
 .pets__slider-buttons {
   position: absolute;
+  z-index: 3;
   top: 518px;
   width: 82.8%;
   height: 62px;
@@ -64,6 +82,9 @@
     top: 383px;
     left: 38%;
     width: 24%;
+  }
+  @include media-mobilesmall{
+    display: none;
   }
 }
 
@@ -104,6 +125,10 @@
   @include media-navigation{
     left: -60px;
   }
+  @include media-mobilesmall{
+    height: 25%;
+    left: -10px;
+  }
 }
 
 .backgroound-images__flower {
@@ -114,5 +139,8 @@
   bottom: 0;
   @include media-navigation{
     width: 28%;
+  }
+  @include media-mobilesmall{
+    right: -19px;
   }
 }

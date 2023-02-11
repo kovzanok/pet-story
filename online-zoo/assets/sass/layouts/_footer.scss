@@ -48,6 +48,9 @@
       margin-top: 13px;
     }
   }
+  @include media-mobilesmall{
+    position: static;
+  }
 }
 
 .socials__item {
@@ -98,7 +101,7 @@
   @include media-laptop {
     flex-basis: 42.4%;
   }
-  @include media-navigation{
+  @include media-navigation {
     flex-direction: column-reverse;
   }
 }
@@ -126,7 +129,7 @@
       text-decoration: underline;
     }
   }
-  @include media-navigation{
+  @include media-navigation {
     width: 100%;
     position: relative;
     top: 105px;
@@ -142,7 +145,7 @@
     left: 28%;
   }
   @include media-navigation {
-    .navigation{
+    .navigation {
       margin: 0;
     }
     left: 0;

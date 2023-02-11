@@ -3,6 +3,16 @@
   color: $color-light;
   position: relative;
   z-index: 2;
+  @include media-navigation{
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    width: 100%;
+    
+  }
+  @include media-mobilesmall{
+    width: 320px;
+  }
 }
 
 .header__logo {
@@ -29,9 +39,10 @@
   align-items: center;
   padding-top: 5px;
   padding-bottom: 13px;
-  @include media-tablet {
+  @include media-navigation {
     padding-top: 3px;
     padding-bottom: 0;
+    justify-content: space-between;
   }
 }
 

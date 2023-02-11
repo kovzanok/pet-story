@@ -5,6 +5,9 @@
 .feed__wrapper {
   padding-top: 39px;
   padding-bottom: 180px;
+  @include media-laptop{
+    padding-bottom: 31px;
+  }
 }
 
 .feed__brief {
@@ -13,6 +16,9 @@
 
 .brief__title {
   @include font($size: 3.6rem, $height: 4.6rem);
+  @include media-laptop{
+    padding-right: 91px;
+  }
 }
 
 .brief__text {
@@ -20,6 +26,9 @@
   @include font($size: 1.6rem, $height: 2.2rem, $weight: 500);
   &_regular {
     font-weight: 400;
+  }
+  @include media-laptop{
+    margin-top: 32px;
   }
 }
 
@@ -30,12 +39,18 @@
 
 .donation-info__content {
   padding: 40px 92px 62px;
+  @include media-laptop{
+    padding: 19px 48px 46px;
+  }
 }
 
 .donation-info__title {
   color: $color-pick-title;
   @include font($size: 3.6rem, $height: 4.7rem);
   margin: 49px 0px 59px;
+  @include media-laptop{
+    margin: 47px 0px 39px;
+  }
 }
 
 .donation-info__subtitle {
@@ -48,6 +63,9 @@
 .donation-info__text {
   color: $color-text;
   @include font($size: 2.4rem, $height: 2.8rem);
+  @include media-laptop{
+    margin-top: 13px;
+  }
 }
 
 .donation-info__diet {
@@ -56,6 +74,10 @@
   height: 250px;
   margin-top: 54px;
   margin-bottom: 46px;
+  @include media-laptop{
+    margin-top: 57px;
+    margin-bottom: 45px;
+  }
 }
 
 .diet__numbers {
@@ -102,6 +124,10 @@
   background-repeat: no-repeat;
   background-image: url("../icons/panda-diet.png");
   background-position: center;
+}
+
+.donation-info__feeding-range{
+  padding: 0px 17px;
 }
 
 

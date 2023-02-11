@@ -16,6 +16,9 @@
 }
 
 .feed-form__input {
+  @include media-laptop{
+    width: 32%;
+  }
   color: $color-feed-form-border;
 
   padding-left: 8px;
@@ -35,6 +38,9 @@
 }
 
 .feed-form__options {
+  @include media-laptop{
+    padding: 27px 30px 28px 12px;
+  }
   padding: 23px 56px 31px 32px;
   width: 28%;
   display: flex;

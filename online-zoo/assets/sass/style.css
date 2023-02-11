@@ -660,6 +660,11 @@ ul {
   line-height: 2.2rem;
   padding: 0 5px 18px;
 }
+@media (max-width: 1160px) {
+  .feeding-range__title {
+    padding: 0 0px 18px;
+  }
+}
 
 .feeding-range__range {
   width: 100%;
@@ -669,6 +674,11 @@ ul {
   padding: 0 18px 0 17px;
   display: flex;
   align-items: center;
+}
+@media (max-width: 1160px) {
+  .feeding-range__range {
+    padding: 0;
+  }
 }
 
 .range__line {
@@ -683,10 +693,16 @@ ul {
   background-color: #404950;
 }
 .range__line_active {
-  width: 79%;
+  width: 76%;
   position: absolute;
   z-index: 1;
-  left: 10.4%;
+  left: 12%;
+}
+@media (max-width: 1160px) {
+  .range__line_active {
+    width: 83%;
+    left: 8%;
+  }
 }
 
 .range__circle {
@@ -697,6 +713,11 @@ ul {
   display: inline-block;
   width: 30px;
   height: 30px;
+}
+@media (max-width: 1160px) {
+  .range__circle:first-child {
+    display: none;
+  }
 }
 .range__circle_inner {
   width: 10px;
@@ -723,6 +744,11 @@ ul {
   font-weight: 500;
   line-height: 3.6rem;
 }
+@media (max-width: 1160px) {
+  .amount__money:first-child {
+    display: none;
+  }
+}
 .amount__money:nth-child(2) {
   padding-left: 5px;
 }
@@ -738,11 +764,26 @@ ul {
 .amount__money:nth-child(6) {
   padding-left: 37px;
 }
+@media (max-width: 1160px) {
+  .amount__money:nth-child(6) {
+    padding-left: 46px;
+  }
+}
 .amount__money:nth-child(7) {
   padding-left: 45px;
 }
+@media (max-width: 1160px) {
+  .amount__money:nth-child(7) {
+    padding-left: 56px;
+  }
+}
 .amount__money:last-child {
   padding-left: 52px;
+}
+@media (max-width: 1160px) {
+  .amount__money:last-child {
+    padding-right: 0px;
+  }
 }
 
 .feed-form {
@@ -777,6 +818,11 @@ ul {
   background-position: right 8px bottom 17px;
   background-image: url("../icons/dollar.svg");
 }
+@media (max-width: 1160px) {
+  .feed-form__input {
+    width: 32%;
+  }
+}
 .feed-form__input:focus {
   background-image: url("../icons/green-dollar.svg");
   border-color: #4b9200;
@@ -787,6 +833,11 @@ ul {
   width: 28%;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 1160px) {
+  .feed-form__options {
+    padding: 27px 30px 28px 12px;
+  }
 }
 .feed-form__options input[type=radio] {
   cursor: pointer;
@@ -1381,6 +1432,11 @@ ul {
   padding-top: 39px;
   padding-bottom: 180px;
 }
+@media (max-width: 1160px) {
+  .feed__wrapper {
+    padding-bottom: 31px;
+  }
+}
 
 .feed__brief {
   color: #ffffff;
@@ -1391,6 +1447,11 @@ ul {
   font-style: normal;
   font-weight: 400;
   line-height: 4.6rem;
+}
+@media (max-width: 1160px) {
+  .brief__title {
+    padding-right: 91px;
+  }
 }
 
 .brief__text {
@@ -1403,6 +1464,11 @@ ul {
 .brief__text_regular {
   font-weight: 400;
 }
+@media (max-width: 1160px) {
+  .brief__text {
+    margin-top: 32px;
+  }
+}
 
 .feed__donation-info {
   border-radius: 20px;
@@ -1410,6 +1476,11 @@ ul {
 
 .donation-info__content {
   padding: 40px 92px 62px;
+}
+@media (max-width: 1160px) {
+  .donation-info__content {
+    padding: 19px 48px 46px;
+  }
 }
 
 .donation-info__title {
@@ -1419,6 +1490,11 @@ ul {
   font-weight: 400;
   line-height: 4.7rem;
   margin: 49px 0px 59px;
+}
+@media (max-width: 1160px) {
+  .donation-info__title {
+    margin: 47px 0px 39px;
+  }
 }
 
 .donation-info__subtitle {
@@ -1438,6 +1514,11 @@ ul {
   font-weight: 400;
   line-height: 2.8rem;
 }
+@media (max-width: 1160px) {
+  .donation-info__text {
+    margin-top: 13px;
+  }
+}
 
 .donation-info__diet {
   max-width: 600px;
@@ -1445,6 +1526,12 @@ ul {
   height: 250px;
   margin-top: 54px;
   margin-bottom: 46px;
+}
+@media (max-width: 1160px) {
+  .donation-info__diet {
+    margin-top: 57px;
+    margin-bottom: 45px;
+  }
 }
 
 .diet__numbers {
@@ -1496,6 +1583,10 @@ ul {
   background-position: center;
 }
 
+.donation-info__feeding-range {
+  padding: 0px 17px;
+}
+
 .donation-info__form {
   padding-top: 42px;
 }
@@ -1515,6 +1606,12 @@ ul {
   height: 388px;
   background-image: url("../img/background-panda.jpg");
   background-position: center;
+}
+@media (max-width: 1160px) {
+  .panda {
+    height: 392px;
+    background-position: left -167px top -193px;
+  }
 }
 
 .layout-2-columns {

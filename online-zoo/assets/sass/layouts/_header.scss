@@ -1,6 +1,8 @@
 .header{
     background-color: $color-header;
     color: $color-light;
+    position: relative;
+    z-index: 2;
 }
 
 .header__logo{

@@ -5,6 +5,9 @@
 
 .navigation__item {
   margin: 0 29px;
+  @include media-laptop{
+    margin: 0 25px;
+}
 }
 
 .navigation__link {

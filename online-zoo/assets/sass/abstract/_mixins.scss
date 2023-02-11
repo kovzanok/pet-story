@@ -19,3 +19,16 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+
+@mixin media-laptop{
+  @media (max-width: $content-width){@content;}
+}
+
+@mixin media-tablet{
+  @media (max-width: $tablet-width){@content;}
+}
+
+@mixin media-mobilesmall{
+  @media (max-width: $mobile-small-width){@content;}
+}

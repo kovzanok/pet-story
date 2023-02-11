@@ -2,22 +2,35 @@
     background-image: url('../img/leaves.png');
     background-repeat: no-repeat;
     background-position: top 12px right 0px;
-    
+    @include media-laptop{
+      background-image: none;
+    }
 }
 
 .backstage__wrapper {
   padding-top: 140px;
   padding-bottom: 50px;
+  @include media-laptop{
+    padding-top: 110px;
+    padding-bottom: 13px;
+  }
 }
 .backstage__image {
   background-image: url("../img/man.jpg");
   background-repeat: no-repeat;
   flex-basis: 60%;
+  @include media-laptop{
+    background-position: top;
+    flex-basis: 48.3%;
+  }
 }
 
 .backstage__info {
   flex-basis: 40%;
   color: $color-text;
+  @include media-laptop{
+    flex-basis: 48.1%;
+  }
 }
 
 .backstage__title {
@@ -29,8 +42,14 @@
   @include font($size: 2.4rem, $height: 2.8rem);
   padding-top: 38px;
   padding-bottom: 21px;
+  @include media-laptop{
+    padding-bottom: 18px;
+  }
 }
 .backstage__text {
   @include font($size: 1.6rem, $height: 2.1rem);
   padding-top: 6px;
+  @include media-laptop{
+    padding-top: 0;
+  }
 }

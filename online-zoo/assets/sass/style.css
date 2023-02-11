@@ -569,6 +569,7 @@ ul {
   height: 366px;
   border-radius: 5px 5px 0px 0px;
   background-position: center;
+  background-size: contain;
 }
 .card__image_panda {
   background-image: url("../img/panda.png");
@@ -593,6 +594,11 @@ ul {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
+}
+@media (max-width: 1160px) {
+  .card__info {
+    height: 72px;
+  }
 }
 
 .card__text {
@@ -935,10 +941,21 @@ ul {
   background-repeat: no-repeat;
   background-position: top 12px right 0px;
 }
+@media (max-width: 1160px) {
+  .backstage {
+    background-image: none;
+  }
+}
 
 .backstage__wrapper {
   padding-top: 140px;
   padding-bottom: 50px;
+}
+@media (max-width: 1160px) {
+  .backstage__wrapper {
+    padding-top: 110px;
+    padding-bottom: 13px;
+  }
 }
 
 .backstage__image {
@@ -946,10 +963,21 @@ ul {
   background-repeat: no-repeat;
   flex-basis: 60%;
 }
+@media (max-width: 1160px) {
+  .backstage__image {
+    background-position: top;
+    flex-basis: 48.3%;
+  }
+}
 
 .backstage__info {
   flex-basis: 40%;
   color: #333b41;
+}
+@media (max-width: 1160px) {
+  .backstage__info {
+    flex-basis: 48.1%;
+  }
 }
 
 .backstage__title {
@@ -967,6 +995,11 @@ ul {
   padding-top: 38px;
   padding-bottom: 21px;
 }
+@media (max-width: 1160px) {
+  .backstage__subtitle {
+    padding-bottom: 18px;
+  }
+}
 
 .backstage__text {
   font-size: 1.6rem;
@@ -974,6 +1007,11 @@ ul {
   font-weight: 400;
   line-height: 2.1rem;
   padding-top: 6px;
+}
+@media (max-width: 1160px) {
+  .backstage__text {
+    padding-top: 0;
+  }
 }
 
 .pets {
@@ -985,6 +1023,11 @@ ul {
   z-index: 3;
   padding-top: 98px;
   padding-bottom: 101px;
+}
+@media (max-width: 1160px) {
+  .pets__wrapper {
+    padding-bottom: 138px;
+  }
 }
 
 .pets__card-wrapper {
@@ -998,6 +1041,13 @@ ul {
   border-radius: 5px;
   padding: 1px;
 }
+@media (max-width: 1160px) {
+  .pets__card-wrapper {
+    height: 355px;
+    justify-content: space-between;
+  }
+}
+
 .pets__button-block {
   display: flex;
   justify-content: center;
@@ -1012,7 +1062,15 @@ ul {
   position: absolute;
   top: 518px;
   width: 82.8%;
+  height: 62px;
   left: 8.5%;
+}
+@media (max-width: 1160px) {
+  .pets__slider-buttons {
+    top: 485px;
+    left: 35%;
+    width: 30%;
+  }
 }
 
 .slider-button {
@@ -1033,13 +1091,30 @@ ul {
   position: absolute;
   width: 100%;
   bottom: 0;
+  height: 290px;
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
 
+.backgroound-images__palm {
+  position: absolute;
+  left: -150px;
+  bottom: 0;
+  height: 160%;
+}
+@media (max-width: 1160px) {
+  .backgroound-images__palm {
+    left: 0;
+    height: auto;
+  }
+}
+
 .backgroound-images__flower {
-  height: 60%;
+  position: absolute;
+  width: 23%;
+  right: 0;
+  bottom: 0;
 }
 
 .pick {
@@ -1379,6 +1454,19 @@ ul {
 }
 .layout-3-columns > * {
   margin-top: 18px;
+}
+@media (max-width: 1160px) {
+  .layout-3-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .layout-3-columns > * {
+    flex-basis: 31.4%;
+  }
+  .layout-3-columns > .pets__card-wrapper:nth-child(4), .layout-3-columns :nth-child(5), .layout-3-columns :nth-child(6) {
+    margin-top: 92px;
+  }
 }
 
 .layout-4-columns {

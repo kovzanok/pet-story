@@ -19,6 +19,7 @@
         transform: translate(0, -125px)
       }
     }
+    
   }
   .card__image {
     @extend %slow-transition;
@@ -26,6 +27,7 @@
     height: 366px;
     border-radius: 5px 5px 0px 0px;
     background-position: center;
+    background-size: contain;
     
     &_panda {
       background-image: url("../img/panda.png");
@@ -51,6 +53,9 @@
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+    @include media-laptop{
+      height: 72px;
+    }
   }
   
   .card__text {

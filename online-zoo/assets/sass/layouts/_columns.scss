@@ -17,6 +17,12 @@
   > * {
     margin-top: 18px;
   }
+  @include media-laptop{
+    @include columns($width: 31.4%);
+    >.pets__card-wrapper:nth-child(4),:nth-child(5),:nth-child(6) {
+      margin-top: 92px;
+    }
+  }
 }
 
 .layout-4-columns {

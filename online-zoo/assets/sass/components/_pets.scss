@@ -7,6 +7,9 @@
   z-index: 3;
   padding-top: 98px;
   padding-bottom: 101px;
+  @include media-laptop{
+    padding-bottom: 138px;
+  }
 }
 
 .pets__card-wrapper {
@@ -19,7 +22,10 @@
   align-items: center;
   border-radius: 5px;
   padding: 1px;
-  &:hover {
+  
+  @include media-laptop{
+      height: 355px;
+      justify-content: space-between;
   }
 }
 
@@ -39,7 +45,13 @@
   position: absolute;
   top: 518px;
   width: 82.8%;
+  height: 62px;
   left: 8.5%;
+  @include media-laptop{
+    top: 485px;
+    left: 35%;
+    width: 30%;
+  }
 }
 
 .slider-button {
@@ -63,12 +75,27 @@
     position: absolute;
     width: 100%;
     bottom: 0;
+    height: 290px;
     display: flex;
     justify-content: space-between;
     align-items: end;
 }
 
+.backgroound-images__palm{
+  position: absolute;
+  left: -150px;
+  bottom: 0;
+  height: 160%;
+  @include media-laptop{
+    left: 0;
+    height: auto;
+  }
+}
 
 .backgroound-images__flower{
-    height: 60%;
+  position: absolute;
+    
+    width: 23%;
+    right: 0;
+    bottom: 0;
 }

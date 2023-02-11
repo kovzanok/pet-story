@@ -16,8 +16,13 @@
 }
 
 .feed-form__input {
-  @include media-laptop{
+  @include media-laptop {
     width: 32%;
+  }
+  @include media-tablet{
+    height: 41px;
+    width: 30%;
+    background-position: right 10px bottom 10px;;
   }
   color: $color-feed-form-border;
 
@@ -38,8 +43,12 @@
 }
 
 .feed-form__options {
-  @include media-laptop{
+  @include media-laptop {
     padding: 27px 30px 28px 12px;
+  }
+  @include media-testimonial{
+    padding: 30px 32px 33px 13px;
+    width: 40%;
   }
   padding: 23px 56px 31px 32px;
   width: 28%;

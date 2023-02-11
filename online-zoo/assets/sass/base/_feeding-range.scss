@@ -1,8 +1,12 @@
 .feeding-range__title {
   @include font($size: 1.6rem, $height: 2.2rem);
   padding: 0 5px 18px;
-  @include media-laptop{
+  @include media-laptop {
     padding: 0 0px 18px;
+  }
+  @include media-tablet{
+    padding: 0 0px 7px;
+    padding-left: 9px;
   }
 }
 
@@ -14,8 +18,11 @@
   padding: 0 18px 0 17px;
   display: flex;
   align-items: center;
-  @include media-laptop{
-    padding: 0;
+  @include media-laptop {
+    padding: 0 9px 0 10px;
+  }
+  @include media-tablet{
+    padding: 0 34px 0 34px;
   }
 }
 
@@ -31,12 +38,12 @@
     background-color: $color-feed-range;
   }
 
-  &_active{
+  &_active {
     width: 76%;
     position: absolute;
     z-index: 1;
     left: 12%;
-    @include media-laptop{
+    @include media-laptop {
       width: 83%;
       left: 8%;
     }
@@ -44,27 +51,29 @@
 }
 
 .range__circle {
-  &:first-child{
-    @include media-laptop{
+  &:first-child {
+    @include media-laptop {
       display: none;
     }
   }
-  position: relative;
-  z-index: 2;
-  padding: 10px;
+  &:nth-child(2),:nth-child(3),:nth-child(4) {
+    @include media-testimonial {
+      display: none;
+    }
+  }
+  &:nth-child(3) {
+    @include media-testimonial {
+      display: none;
+    }
+  }
+  border-radius: 50%;
+  background-position: center;
+  background-color: $color-range-circle;
   cursor: pointer;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
 
-  &_inner {
-    width: 10px;
-    height: 10px;
-
-    border-radius: 50%;
-    background-position: center;
-    background-color: $color-range-circle;
-  }
   &:hover {
     .range__circle_inner {
       background-color: $color-active;
@@ -81,9 +90,14 @@
 }
 
 .amount__money {
+  &:nth-child(2) {
+    @include media-testimonial {
+      display: none;
+    }
+  }
   @include font($size: 2.6rem, $height: 3.6rem, $weight: 500);
-  &:first-child{
-    @include media-laptop{
+  &:first-child {
+    @include media-laptop {
       display: none;
     }
   }
@@ -92,29 +106,47 @@
   }
   &:nth-child(3) {
     padding-left: 13px;
+    @include media-testimonial {
+      display: none;
+    }
   }
   &:nth-child(4) {
     padding-left: 21px;
+    @include media-testimonial {
+      padding: 0;
+    }
   }
   &:nth-child(5) {
     padding-left: 30px;
+    @include media-testimonial {
+      padding: 0;
+    }
   }
   &:nth-child(6) {
-    @include media-laptop{
+    @include media-laptop {
       padding-left: 46px;
     }
     padding-left: 37px;
+    @include media-testimonial {
+      padding: 0;
+    }
   }
   &:nth-child(7) {
-    @include media-laptop{
+    @include media-laptop {
       padding-left: 56px;
     }
     padding-left: 45px;
+    @include media-testimonial {
+      padding: 0;
+    }
   }
   &:last-child {
-    @include media-laptop{
+    @include media-laptop {
       padding-right: 0px;
     }
     padding-left: 52px;
+    @include media-testimonial {
+      padding: 0;
+    }
   }
 }

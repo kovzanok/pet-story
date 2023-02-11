@@ -8,16 +8,25 @@
   @include media-laptop{
     padding-bottom: 31px;
   }
+  @include media-tablet{
+    padding-top: 32px;
+    padding-bottom: 46px;
+  }
 }
 
 .feed__brief {
   color: $color-light;
+  
 }
 
 .brief__title {
   @include font($size: 3.6rem, $height: 4.6rem);
   @include media-laptop{
     padding-right: 91px;
+  }
+  @include media-tablet{
+    @include font($size: 2.4rem,$height: 2.8rem);
+    padding-right: 19px;
   }
 }
 
@@ -30,6 +39,9 @@
   @include media-laptop{
     margin-top: 32px;
   }
+  @include media-tablet{
+    margin-top: 21px;
+  }
 }
 
 .feed__donation-info {
@@ -37,10 +49,21 @@
   border-radius: 20px;
 }
 
+.donation-info__form-content{
+  @include media-tablet{
+    padding-bottom: 30px;
+  }
+}
+
+
 .donation-info__content {
-  padding: 40px 92px 62px;
+  padding: 40px 92px 0px;
   @include media-laptop{
-    padding: 19px 48px 46px;
+    padding: 19px 48px 0px;
+  }
+  @include media-tablet{
+    padding-top: 34px;
+    padding-right: 43px;
   }
 }
 
@@ -51,6 +74,9 @@
   @include media-laptop{
     margin: 47px 0px 39px;
   }
+  @include media-tablet{
+    margin: 28px 0px 29px;
+  }
 }
 
 .donation-info__subtitle {
@@ -58,6 +84,9 @@
   @include font($size: 4.8rem, $height: 5.76rem);
   text-align: center;
   padding-right: 10px;
+  @include media-tablet{
+    padding-right: 0;
+  }
 }
 
 .donation-info__text {
@@ -65,6 +94,10 @@
   @include font($size: 2.4rem, $height: 2.8rem);
   @include media-laptop{
     margin-top: 13px;
+  }
+  @include media-tablet{
+    margin-top: 19px;
+    text-align: center;
   }
 }
 
@@ -77,6 +110,10 @@
   @include media-laptop{
     margin-top: 57px;
     margin-bottom: 45px;
+  }
+  @include media-tablet{
+    margin-top: 50px;
+    margin-bottom: 40px;
   }
 }
 
@@ -124,10 +161,14 @@
   background-repeat: no-repeat;
   background-image: url("../icons/panda-diet.png");
   background-position: center;
+  
 }
 
 .donation-info__feeding-range{
   padding: 0px 17px;
+  @include media-tablet{
+    padding: 0;
+  }
 }
 
 
@@ -141,5 +182,8 @@
   @include font($size: 1.6rem,$height: 2.2rem);
   padding-top: 31px;
   text-align: center;
+  @include media-tablet{
+    padding-top: 28px;
+  }
 }
 

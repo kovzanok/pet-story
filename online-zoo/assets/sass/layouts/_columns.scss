@@ -49,9 +49,20 @@
       display: none;
     }
   }
+  @include media-tablet{
+    flex-direction: column;
+    @include columns($width: 100%);
+    >.testimonial__wrapper:nth-child(2),:nth-child(3){
+      margin-top: 16px;
+    }
+  }
 }
 
 .layout-5-columns__wrapper {
   max-width: 764px;
   margin: 0 auto;
+  @include media-tablet{
+    max-width: 568px;
+    
+  }
 }

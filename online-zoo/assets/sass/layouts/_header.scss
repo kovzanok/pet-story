@@ -1,45 +1,56 @@
-.header{
-    background-color: $color-header;
-    color: $color-light;
-    position: relative;
-    z-index: 2;
+.header {
+  background-color: $color-header;
+  color: $color-light;
+  position: relative;
+  z-index: 2;
 }
 
-.header__logo{
-    padding-top: 8px;
-    @include media-tablet{
-        padding: 0;
+.header__logo {
+  padding-top: 8px;
+  @include media-tablet {
+    padding: 0;
+    .logo {
+      width: 47px;
+      border: 0;
+      padding: 0;
     }
-    
+    .logo__title {
+      @include font($size: 1.2rem, $height: 1.5rem);
+    }
+    .logo__icon {
+      width: 5px;
+      left: 4px;
+    }
+  }
 }
 
-.header__wrapper{
-    display: flex;
-    align-items: center;
-    padding-top: 5px;
-    padding-bottom: 13px;
-    @include media-laptop{
-        padding-top: 3px;
-        padding-bottom: 0;
-    }
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 13px;
+  @include media-tablet {
+    padding-top: 3px;
+    padding-bottom: 0;
+  }
 }
 
-.header__nav{
-    padding-left: 34px;
-    padding-top: 7px;
-    @include media-tablet{
-        display: none;
-    }
+.header__nav {
+  padding-left: 34px;
+  padding-top: 7px;
+  @include media-tablet {
+    display: none;
+  }
 }
 
-.header__design{
-    @include font($size: 1.6rem, $height: 2.2rem, $weight: 500);
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 10px;
-    padding-left: 10px;
-    @include media-tablet{
-        display: none;
-    }
+.header__design {
+  @include font($size: 1.6rem, $height: 2.2rem, $weight: 500);
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  padding-left: 10px;
+  @include media-tablet {
+    display: none;
+  }
 }

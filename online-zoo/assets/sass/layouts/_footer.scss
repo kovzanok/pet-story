@@ -7,12 +7,25 @@
   position: relative;
   padding-top: 39px;
   padding-bottom: 30px;
-  
+  @include media-tablet {
+    padding-top: 13px;
+    padding-bottom: 118px;
+  }
+}
+
+.footer__left {
+  @include media-tablet {
+    flex-basis: 50%;
+    position: relative;
+  }
 }
 
 .footer__button-block {
   padding-top: 71px;
   padding-bottom: 15px;
+  @include media-tablet {
+    padding-top: 35px;
+  }
 }
 
 .footer__button {
@@ -27,6 +40,14 @@
   > * {
     margin-top: 6px;
   }
+  @include media-tablet {
+    position: absolute;
+    right: -311px;
+    top: -28px;
+    > * {
+      margin-top: 13px;
+    }
+  }
 }
 
 .socials__item {
@@ -39,6 +60,12 @@
       }
       color: $color-active;
     }
+  }
+}
+
+.socials__text {
+  @include media-tablet {
+    display: none;
   }
 }
 
@@ -68,13 +95,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @include media-laptop{
+  @include media-laptop {
     flex-basis: 42.4%;
+  }
+  @include media-tablet{
+    flex-direction: column-reverse;
+  }
+}
+
+.footer__form {
+  @include media-tablet {
+    display: none;
   }
 }
 
 .footer__design {
-  @include font($size: 1.6rem, $height: 2rem,$weight: 100);
+  @include font($size: 1.6rem, $height: 2rem, $weight: 100);
   text-align: right;
   align-self: flex-end;
   width: 70%;
@@ -85,11 +121,16 @@
     align-self: flex-end;
     cursor: pointer;
     margin: 10px 0;
-    &:active{
+    &:active {
       color: $color-active;
       text-decoration: underline;
     }
-
+  }
+  @include media-tablet{
+    width: 90%;
+    position: relative;
+    top: 105px;
+    margin-bottom: 0px;
   }
 }
 
@@ -97,7 +138,14 @@
   position: absolute;
   bottom: 8%;
   left: 31.8%;
-  @include media-laptop{
+  @include media-laptop {
     left: 28%;
+  }
+  @include media-tablet {
+    .navigation{
+      margin: 0;
+    }
+    left: 0;
+    bottom: 6%;
   }
 }

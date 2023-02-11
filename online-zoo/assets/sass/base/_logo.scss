@@ -7,28 +7,15 @@
   text-align: center;
   padding: 2px 5px;
   color: $color-light;
-  @include media-laptop{
-    width: 47px;
-    border: 0;
-    padding: 0;
-  }
-
 }
 
 .logo__title {
   display: inline-block;
   @include font($size: 1.9rem, $height: 2.3rem);
-  @include media-tablet{
-    @include font($size: 1.2rem, $height: 1.5rem)
-  }
 }
 
 .logo__icon {
   position: absolute;
   bottom: 7px;
   left: 9px;
-  @include media-tablet{
-    width: 5px;
-    left: 4px;
-  }
 }

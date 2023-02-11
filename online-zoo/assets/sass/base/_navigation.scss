@@ -8,6 +8,9 @@
   @include media-laptop{
     margin: 0 25px;
 }
+@include media-tablet{
+  margin: 0 20px;
+}
 }
 
 .navigation__link {

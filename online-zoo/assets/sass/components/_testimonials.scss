@@ -6,6 +6,10 @@
     background-size: 197px 327px;
     background-position: bottom -88px right 0px;
   }
+  @include media-tablet{
+    background-size: 120px 203px;
+    background-position: bottom -70px right -5px;
+  }
 }
 
 
@@ -15,6 +19,10 @@
   @include media-laptop{
     padding-top: 98px;
     padding-bottom: 137px;
+  }
+  @include media-tablet{
+    padding-top: 59px;
+    padding-bottom: 79px;
   }
 }
 
@@ -33,15 +41,25 @@
   @include media-laptop{
     padding-top: 19px;
   }
+  @include media-tablet{
+    display: none;
+  }
 }
 
 
 
 .testimonials__button-block{
   padding-top: 52px;
+  @include media-tablet{
+    padding-top: 38px;
+    text-align: center;
+  }
 }
 
 .testimonials__button{
   border-radius: 5px;
   padding: 16px 82px 17px 85px;
+  @include media-tablet{
+    padding: 16px 56px 17px 56px;
+  }
 }

@@ -110,14 +110,6 @@ const modalClickHandler = function (e) {
 };
 
 menuButton.addEventListener("click", menuButtonClickHandler);
-if (window.innerWidth <= 860) {
-  const testimonialsList = document.querySelector(".carousel__container");
-  testimonialsList.addEventListener("click", testimonialsClickHandler);
-}
-
-if (window.innerWidth <= 1160 && window.innerWidth > 860) {
-  document.querySelector(".progress-bar__wrapper input").max = 8;
-}
 
 const progressBarHandler = function (e) {
   const layout = document.querySelector(".layout-4-columns");
@@ -129,6 +121,19 @@ const progressBarHandler = function (e) {
   }
 };
 
-const progressBar = document.querySelector(".progress-bar__wrapper input");
-document.querySelector(".layout-4-columns").style.right = 0 + "px";
-progressBar.addEventListener("input", progressBarHandler);
+if (document.querySelector(".panda")) {
+} else {
+  if (window.innerWidth <= 860) {
+    const testimonialsList = document.querySelector(".carousel__container");
+    testimonialsList.addEventListener("click", testimonialsClickHandler);
+  }
+
+  const progressBar = document.querySelector(".progress-bar__wrapper input");
+
+  if (window.innerWidth <= 1160 && window.innerWidth > 860) {
+    document.querySelector(".progress-bar__wrapper input").max = 8;
+  }
+
+  progressBar.style.right = 0 + "px";
+  progressBar.addEventListener("input", progressBarHandler);
+}

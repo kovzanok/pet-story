@@ -1,4 +1,4 @@
-.pets__card:hover .card__image, .link {
+.menu, .menu__wrapper, .hamburger__line, .hamburger::after, .hamburger::before, .pets__card:hover .card__image, .link {
   transition: all 0.3s ease-out;
 }
 
@@ -25,6 +25,10 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "Roboto", sans-serif;
+}
+
+.body_lock {
+  overflow: hidden;
 }
 
 a {
@@ -425,6 +429,20 @@ ul {
 .navigation__link_active {
   cursor: default;
   color: #ffa500;
+}
+
+.burger__logo .logo {
+  color: #fe9013;
+  border-color: #fe9013;
+  width: 76px;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.8rem;
+  padding: 0;
+}
+.burger__logo .logo__icon {
+  left: 9px;
 }
 
 .button {
@@ -1132,9 +1150,14 @@ ul {
   border-radius: 2px;
 }
 
+.hamburger_active::before, .hamburger_active::after {
+  background-color: #333b41;
+}
+
 .hamburger {
   display: none;
   position: relative;
+  z-index: 5;
   width: 18px;
   height: 10px;
 }
@@ -1150,6 +1173,15 @@ ul {
 .hamburger::after {
   bottom: 0;
   left: 0;
+}
+.hamburger_active .hamburger__line {
+  transform: scale(0);
+}
+.hamburger_active::after {
+  transform: rotate(45deg) translate(-30%);
+}
+.hamburger_active::before {
+  transform: rotate(-45deg) translate(-30%);
 }
 
 .hamburger__line {
@@ -2730,6 +2762,51 @@ ul {
   .header__design {
     display: none;
   }
+}
+
+.menu__wrapper {
+  visibility: hidden;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.menu__wrapper_active {
+  position: fixed;
+  visibility: visible;
+}
+.menu__wrapper_active .menu {
+  left: 0;
+}
+
+.menu {
+  position: relative;
+  left: -100%;
+  width: 100%;
+  height: 329px;
+  background-color: #ffffff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.2rem;
+  color: #333b41;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.menu__nav {
+  margin-top: 30px;
+}
+.menu__nav > * {
+  margin: 0;
+}
+.menu__nav > .navigation__item {
+  margin-top: 15px;
+}
+.menu__nav > .navigation__item:first-child {
+  margin-top: 0px;
 }
 
 .wrapper {

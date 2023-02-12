@@ -22,3 +22,18 @@
     color: $color-link;
   }
 }
+
+
+.burger__logo{
+  .logo{
+    color: $color-pick-title;
+    border-color: $color-pick-title;
+    width: 76px;
+    @include font($size: 1.5rem,$height: 1.8rem);
+    padding: 0;
+  }
+
+  .logo__icon{
+    left: 9px;
+  }
+}

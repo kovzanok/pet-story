@@ -8,7 +8,7 @@
     padding: 0 0px 7px;
     padding-left: 9px;
   }
-  @include media-mobilesmall {
+  @include media-mobile-width {
     padding-left: 0px;
     padding-bottom: 10px;
   }
@@ -28,7 +28,7 @@
   @include media-tablet {
     padding: 0 34px 0 34px;
   }
-  @include media-mobilesmall {
+  @include media-mobile-width {
     height: 13.5px;
     padding: 0 18px;
   }
@@ -59,7 +59,7 @@
 }
 
 .range__circle {
-  @include media-mobilesmall {
+  @include media-mobile-width {
     width: 5px;
     height: 5px;
   }
@@ -101,7 +101,7 @@
   > * {
     flex-basis: 12.5%;
   }
-  @include media-mobilesmall{
+  @include media-mobile-width{
     margin-top: 5px;
     >*{
       flex-basis: 10%;
@@ -110,7 +110,7 @@
 }
 
 .amount__money {
-  @include media-mobilesmall {
+  @include media-mobile-width {
     @include font($size: 1.3rem, $height: 1.8rem);
   }
   &:nth-child(2) {

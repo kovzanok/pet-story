@@ -1,7 +1,7 @@
 .feed {
   background: $color-pick-background;
   >.wrapper{
-    @include media-mobilesmall{
+    @include media-pets{
       padding-left: 9px;
     }
   }
@@ -17,7 +17,7 @@
     padding-top: 32px;
     padding-bottom: 46px;
   }
-  @include media-mobilesmall{
+  @include media-pets{
     padding-bottom: 18px;
   }
 }
@@ -35,7 +35,7 @@
     @include font($size: 2.4rem, $height: 2.8rem);
     padding-right: 19px;
   }
-  @include media-mobilesmall {
+  @include media-pets {
     padding-right: 0;
   }
 }
@@ -52,7 +52,7 @@
   @include media-tablet {
     margin-top: 21px;
   }
-  @include media-mobilesmall {
+  @include media-pets {
     padding-right: 2px;
   }
 }
@@ -66,7 +66,7 @@
   @include media-tablet {
     padding-bottom: 30px;
   }
-  @include media-mobilesmall{
+  @include media-pets{
     padding-bottom: 22px;
   }
 }
@@ -80,7 +80,7 @@
     padding-top: 34px;
     padding-right: 43px;
   }
-  @include media-mobilesmall {
+  @include media-pets {
     padding-top: 20px;
     padding-right: 3px;
     padding-left: 0;
@@ -97,7 +97,7 @@
   @include media-tablet {
     margin: 28px 0px 29px;
   }
-  @include media-mobilesmall {
+  @include media-pets {
     @include font($size: 2.4rem, $height: 2.8rem);
     margin-top: 33px;
   }
@@ -111,8 +111,8 @@
   @include media-tablet {
     padding-right: 0;
   }
-  @include media-mobilesmall {
-    @include media-mobilesmall {
+  @include media-pets {
+    @include media-pets {
       @include font($size: 2.4rem, $height: 2.8rem);
     }
   }
@@ -128,7 +128,7 @@
     margin-top: 19px;
     text-align: center;
   }
-  @include media-mobilesmall {
+  @include media-pets {
     @include font($size: 1.6rem, $height: 2.2rem);
     margin-top: 9px;
   }
@@ -148,7 +148,7 @@
     margin-top: 50px;
     margin-bottom: 40px;
   }
-  @include media-mobilesmall {
+  @include media-pets {
     margin-top: 0;
     height: 134px;
     margin-bottom: 3px;
@@ -168,7 +168,7 @@
 .numbers__ammount {
   color: $color-header;
   @include font($size: 7.2rem, $height: 5.7rem, $weight: 500);
-  @include media-mobilesmall {
+  @include media-pets {
     @include font($size: 4rem, $height: 3.2rem);
   }
 }
@@ -181,7 +181,7 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 55px;
-  @include media-mobilesmall{
+  @include media-pets{
     justify-content: flex-start;
   }
 }
@@ -190,7 +190,7 @@
   color: $color-text;
   @include font($size: 1.6rem, $height: 2.2rem, $weight: 400);
 
-  @include media-mobilesmall {
+  @include media-pets {
     @include font($size: 0.9rem, $height: 1.2rem);
     margin-top: 8px;
   }
@@ -201,7 +201,7 @@
   background-image: url("../icons/x.png");
   background-repeat: no-repeat;
   background-position: left 11px bottom 104px;
-  @include media-mobilesmall{
+  @include media-pets{
     background-position: left 5px bottom 69px;
     background-size: 8px 8px;
   }
@@ -214,7 +214,7 @@
   background-repeat: no-repeat;
   background-image: url("../icons/panda-diet.png");
   background-position: center;
-  @include media-mobilesmall {
+  @include media-pets {
     flex-basis: 53%;
     background-size: 158px 134px;
   }
@@ -229,7 +229,7 @@
 
 .donation-info__form {
   padding-top: 42px;
-  @include media-mobilesmall{
+  @include media-pets{
     padding-top: 16px;
   }
 }
@@ -242,7 +242,7 @@
   @include media-tablet {
     padding-top: 28px;
   }
-  @include media-mobilesmall{
+  @include media-pets{
     padding-top: 31px;
   }
 }

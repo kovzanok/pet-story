@@ -757,7 +757,7 @@ ul {
     padding-left: 9px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .feeding-range__title {
     padding-left: 0px;
     padding-bottom: 10px;
@@ -783,7 +783,7 @@ ul {
     padding: 0 34px 0 34px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .feeding-range__range {
     height: 13.5px;
     padding: 0 18px;
@@ -823,7 +823,7 @@ ul {
   width: 10px;
   height: 10px;
 }
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .range__circle {
     width: 5px;
     height: 5px;
@@ -857,7 +857,7 @@ ul {
 .feeding-range__amount > * {
   flex-basis: 12.5%;
 }
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .feeding-range__amount {
     margin-top: 5px;
   }
@@ -872,7 +872,7 @@ ul {
   font-weight: 500;
   line-height: 3.6rem;
 }
-@media (max-width: 320px) {
+@media (max-width: 425px) {
   .amount__money {
     font-size: 1.3rem;
     font-style: normal;
@@ -1005,7 +1005,7 @@ ul {
   background-image: url("../icons/green-dollar.svg");
   border-color: #4b9200;
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .feed-form__input {
     width: 60%;
   }
@@ -1028,7 +1028,7 @@ ul {
     width: 40%;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .feed-form__options {
     padding: 25px 34px 27px 11px;
     width: 80%;
@@ -2129,7 +2129,7 @@ ul {
 .feed {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .feed > .wrapper {
     padding-left: 9px;
   }
@@ -2150,7 +2150,7 @@ ul {
     padding-bottom: 46px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .feed__wrapper {
     padding-bottom: 18px;
   }
@@ -2180,7 +2180,7 @@ ul {
     padding-right: 19px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .brief__title {
     padding-right: 0;
   }
@@ -2206,7 +2206,7 @@ ul {
     margin-top: 21px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .brief__text {
     padding-right: 2px;
   }
@@ -2221,7 +2221,7 @@ ul {
     padding-bottom: 30px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .donation-info__form-content {
     padding-bottom: 22px;
   }
@@ -2241,7 +2241,7 @@ ul {
     padding-right: 43px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .donation-info__content {
     padding-top: 20px;
     padding-right: 3px;
@@ -2267,7 +2267,7 @@ ul {
     margin: 28px 0px 29px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .donation-info__title {
     font-size: 2.4rem;
     font-style: normal;
@@ -2291,7 +2291,7 @@ ul {
     padding-right: 0;
   }
 }
-@media (max-width: 320px) and (max-width: 320px) {
+@media (max-width: 520px) and (max-width: 520px) {
   .donation-info__subtitle {
     font-size: 2.4rem;
     font-style: normal;
@@ -2318,7 +2318,7 @@ ul {
     text-align: center;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .donation-info__text {
     font-size: 1.6rem;
     font-style: normal;
@@ -2347,7 +2347,7 @@ ul {
     margin-bottom: 40px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .donation-info__diet {
     margin-top: 0;
     height: 134px;
@@ -2369,7 +2369,7 @@ ul {
   font-weight: 500;
   line-height: 5.7rem;
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .numbers__ammount {
     font-size: 4rem;
     font-style: normal;
@@ -2387,7 +2387,7 @@ ul {
   justify-content: space-between;
   margin-top: 55px;
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .numbers__info {
     justify-content: flex-start;
   }
@@ -2400,7 +2400,7 @@ ul {
   font-weight: 400;
   line-height: 2.2rem;
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .numbers__for-day {
     font-size: 0.9rem;
     font-style: normal;
@@ -2416,7 +2416,7 @@ ul {
   background-repeat: no-repeat;
   background-position: left 11px bottom 104px;
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .numbers__per {
     background-position: left 5px bottom 69px;
     background-size: 8px 8px;
@@ -2431,7 +2431,7 @@ ul {
   background-image: url("../icons/panda-diet.png");
   background-position: center;
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .diet__animal {
     flex-basis: 53%;
     background-size: 158px 134px;
@@ -2450,7 +2450,7 @@ ul {
 .donation-info__form {
   padding-top: 42px;
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .donation-info__form {
     padding-top: 16px;
   }
@@ -2470,7 +2470,7 @@ ul {
     padding-top: 28px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 520px) {
   .donation-info__postsciption {
     padding-top: 31px;
   }

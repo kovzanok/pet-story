@@ -4,9 +4,13 @@
   @include media-laptop {
     padding: 0 0px 18px;
   }
-  @include media-tablet{
+  @include media-tablet {
     padding: 0 0px 7px;
     padding-left: 9px;
+  }
+  @include media-mobilesmall {
+    padding-left: 0px;
+    padding-bottom: 10px;
   }
 }
 
@@ -21,8 +25,12 @@
   @include media-laptop {
     padding: 0 9px 0 10px;
   }
-  @include media-tablet{
+  @include media-tablet {
     padding: 0 34px 0 34px;
+  }
+  @include media-mobilesmall {
+    height: 13.5px;
+    padding: 0 18px;
   }
 }
 
@@ -51,12 +59,18 @@
 }
 
 .range__circle {
+  @include media-mobilesmall {
+    width: 5px;
+    height: 5px;
+  }
   &:first-child {
     @include media-laptop {
       display: none;
     }
   }
-  &:nth-child(2),:nth-child(3),:nth-child(4) {
+  &:nth-child(2),
+  :nth-child(3),
+  :nth-child(4) {
     @include media-testimonial {
       display: none;
     }
@@ -87,9 +101,18 @@
   > * {
     flex-basis: 12.5%;
   }
+  @include media-mobilesmall{
+    margin-top: 5px;
+    >*{
+      flex-basis: 10%;
+    }
+  }
 }
 
 .amount__money {
+  @include media-mobilesmall {
+    @include font($size: 1.3rem, $height: 1.8rem);
+  }
   &:nth-child(2) {
     @include media-testimonial {
       display: none;

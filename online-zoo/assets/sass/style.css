@@ -757,6 +757,12 @@ ul {
     padding-left: 9px;
   }
 }
+@media (max-width: 320px) {
+  .feeding-range__title {
+    padding-left: 0px;
+    padding-bottom: 10px;
+  }
+}
 
 .feeding-range__range {
   width: 100%;
@@ -775,6 +781,12 @@ ul {
 @media (max-width: 640px) {
   .feeding-range__range {
     padding: 0 34px 0 34px;
+  }
+}
+@media (max-width: 320px) {
+  .feeding-range__range {
+    height: 13.5px;
+    padding: 0 18px;
   }
 }
 
@@ -811,13 +823,21 @@ ul {
   width: 10px;
   height: 10px;
 }
+@media (max-width: 320px) {
+  .range__circle {
+    width: 5px;
+    height: 5px;
+  }
+}
 @media (max-width: 1160px) {
   .range__circle:first-child {
     display: none;
   }
 }
 @media (max-width: 860px) {
-  .range__circle:nth-child(2), .range__circle :nth-child(3), .range__circle :nth-child(4) {
+  .range__circle:nth-child(2),
+  .range__circle :nth-child(3),
+  .range__circle :nth-child(4) {
     display: none;
   }
 }
@@ -837,12 +857,28 @@ ul {
 .feeding-range__amount > * {
   flex-basis: 12.5%;
 }
+@media (max-width: 320px) {
+  .feeding-range__amount {
+    margin-top: 5px;
+  }
+  .feeding-range__amount > * {
+    flex-basis: 10%;
+  }
+}
 
 .amount__money {
   font-size: 2.6rem;
   font-style: normal;
   font-weight: 500;
   line-height: 3.6rem;
+}
+@media (max-width: 320px) {
+  .amount__money {
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8rem;
+  }
 }
 @media (max-width: 860px) {
   .amount__money:nth-child(2) {
@@ -969,6 +1005,11 @@ ul {
   background-image: url("../icons/green-dollar.svg");
   border-color: #4b9200;
 }
+@media (max-width: 320px) {
+  .feed-form__input {
+    width: 60%;
+  }
+}
 
 .feed-form__options {
   padding: 23px 56px 31px 32px;
@@ -985,6 +1026,12 @@ ul {
   .feed-form__options {
     padding: 30px 32px 33px 13px;
     width: 40%;
+  }
+}
+@media (max-width: 320px) {
+  .feed-form__options {
+    padding: 25px 34px 27px 11px;
+    width: 80%;
   }
 }
 .feed-form__options input[type=radio] {
@@ -2082,6 +2129,11 @@ ul {
 .feed {
   background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #febdab 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #e0d8f0 80.49%, #eaf7fe 127.9%, #eaf7fe 149.54%);
 }
+@media (max-width: 320px) {
+  .feed > .wrapper {
+    padding-left: 9px;
+  }
+}
 
 .feed__wrapper {
   padding-top: 39px;
@@ -2096,6 +2148,11 @@ ul {
   .feed__wrapper {
     padding-top: 32px;
     padding-bottom: 46px;
+  }
+}
+@media (max-width: 320px) {
+  .feed__wrapper {
+    padding-bottom: 18px;
   }
 }
 
@@ -2123,6 +2180,11 @@ ul {
     padding-right: 19px;
   }
 }
+@media (max-width: 320px) {
+  .brief__title {
+    padding-right: 0;
+  }
+}
 
 .brief__text {
   margin-top: 10px;
@@ -2144,6 +2206,11 @@ ul {
     margin-top: 21px;
   }
 }
+@media (max-width: 320px) {
+  .brief__text {
+    padding-right: 2px;
+  }
+}
 
 .feed__donation-info {
   border-radius: 20px;
@@ -2152,6 +2219,11 @@ ul {
 @media (max-width: 640px) {
   .donation-info__form-content {
     padding-bottom: 30px;
+  }
+}
+@media (max-width: 320px) {
+  .donation-info__form-content {
+    padding-bottom: 22px;
   }
 }
 
@@ -2167,6 +2239,13 @@ ul {
   .donation-info__content {
     padding-top: 34px;
     padding-right: 43px;
+  }
+}
+@media (max-width: 320px) {
+  .donation-info__content {
+    padding-top: 20px;
+    padding-right: 3px;
+    padding-left: 0;
   }
 }
 
@@ -2188,6 +2267,15 @@ ul {
     margin: 28px 0px 29px;
   }
 }
+@media (max-width: 320px) {
+  .donation-info__title {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem;
+    margin-top: 33px;
+  }
+}
 
 .donation-info__subtitle {
   color: #fe9013;
@@ -2201,6 +2289,14 @@ ul {
 @media (max-width: 640px) {
   .donation-info__subtitle {
     padding-right: 0;
+  }
+}
+@media (max-width: 320px) and (max-width: 320px) {
+  .donation-info__subtitle {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.8rem;
   }
 }
 
@@ -2220,6 +2316,15 @@ ul {
   .donation-info__text {
     margin-top: 19px;
     text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .donation-info__text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.2rem;
+    margin-top: 9px;
   }
 }
 
@@ -2242,6 +2347,13 @@ ul {
     margin-bottom: 40px;
   }
 }
+@media (max-width: 320px) {
+  .donation-info__diet {
+    margin-top: 0;
+    height: 134px;
+    margin-bottom: 3px;
+  }
+}
 
 .diet__numbers {
   flex-basis: 40%;
@@ -2257,6 +2369,14 @@ ul {
   font-weight: 500;
   line-height: 5.7rem;
 }
+@media (max-width: 320px) {
+  .numbers__ammount {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3.2rem;
+  }
+}
 
 .numbers__info {
   display: flex;
@@ -2267,6 +2387,11 @@ ul {
   justify-content: space-between;
   margin-top: 55px;
 }
+@media (max-width: 320px) {
+  .numbers__info {
+    justify-content: flex-start;
+  }
+}
 
 .numbers__for-day {
   color: #333b41;
@@ -2275,12 +2400,27 @@ ul {
   font-weight: 400;
   line-height: 2.2rem;
 }
+@media (max-width: 320px) {
+  .numbers__for-day {
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2rem;
+    margin-top: 8px;
+  }
+}
 
 .numbers__per {
   width: 28px;
   background-image: url("../icons/x.png");
   background-repeat: no-repeat;
   background-position: left 11px bottom 104px;
+}
+@media (max-width: 320px) {
+  .numbers__per {
+    background-position: left 5px bottom 69px;
+    background-size: 8px 8px;
+  }
 }
 
 .diet__animal {
@@ -2290,6 +2430,12 @@ ul {
   background-repeat: no-repeat;
   background-image: url("../icons/panda-diet.png");
   background-position: center;
+}
+@media (max-width: 320px) {
+  .diet__animal {
+    flex-basis: 53%;
+    background-size: 158px 134px;
+  }
 }
 
 .donation-info__feeding-range {
@@ -2304,6 +2450,11 @@ ul {
 .donation-info__form {
   padding-top: 42px;
 }
+@media (max-width: 320px) {
+  .donation-info__form {
+    padding-top: 16px;
+  }
+}
 
 .donation-info__postsciption {
   color: #333b41;
@@ -2317,6 +2468,11 @@ ul {
 @media (max-width: 640px) {
   .donation-info__postsciption {
     padding-top: 28px;
+  }
+}
+@media (max-width: 320px) {
+  .donation-info__postsciption {
+    padding-top: 31px;
   }
 }
 
@@ -2336,6 +2492,13 @@ ul {
   .panda {
     height: 369px;
     background-position: left -365px top -216px;
+  }
+}
+@media (max-width: 320px) {
+  .panda {
+    height: 221px;
+    background-position: left -128px top -59px;
+    background-size: 710px 375px;
   }
 }
 

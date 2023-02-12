@@ -41,8 +41,9 @@
     }
   }
 
-  @include media-mobilesmall {
+  @include media-pets {
     @include columns($width: 100%);
+    justify-content: center;
     > .pets__card-wrapper:first-child {
       margin-top: 31px;
     }

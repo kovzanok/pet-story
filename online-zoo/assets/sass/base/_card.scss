@@ -10,7 +10,8 @@
     .card__image {
       border-radius: 5px;
       @extend %transition;
-      transform: scale(1.1);
+      transform: scale(1.05);
+      
       filter: brightness(30%);
     }
     .card__text_hidden {
@@ -65,6 +66,9 @@
   padding-left: 14px;
   padding-top: 7px;
   &_hidden {
+    @include media-laptop{
+      left: 20%;
+    }
     position: absolute;
     padding: 5px;
     width: 160px;
@@ -107,17 +111,19 @@
   background-repeat: no-repeat;
   &_fruits {
     background-image: url("../icons/banana-bamboo_icon.png");
-    @include media-tablet{
+    @include media-tablet {
       background-size: 30px 32px;
       background-position: top 6px left 21px;
     }
   }
   &_meat {
-    background-position: top 6px left 13px;
     background-image: url("../icons/meet-fish_icon.png");
-    @include media-tablet{
+    @include media-laptop {
+      background-position: top 9px left 5px;
+    }
+    @include media-tablet {
       background-size: 40px 32px;
+      background-position: top 6px left 13px;
     }
   }
-  
 }

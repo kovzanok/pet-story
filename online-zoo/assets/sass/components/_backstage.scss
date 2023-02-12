@@ -10,7 +10,7 @@
     background-position: top -6px right -32px;
     background-size: auto 491px;
   }
-  @include media-mobilesmall{
+  @include media-mobile{
     background-position: top 41px right -43px;
     background-size: auto 215px;
   }
@@ -27,7 +27,7 @@
     padding-top: 61px;
     padding-bottom: 30px;
   }
-  @include media-mobilesmall{
+  @include media-add-tablet{
     padding-top: 18px;
     padding-bottom: 0;
   }
@@ -54,7 +54,7 @@
   @include media-tablet {
     flex-basis: 80%;
   }
-  @include media-mobilesmall{
+  @include media-mobile{
     flex-basis: 100%;
     
   }
@@ -66,13 +66,12 @@
     padding-left: 5px;
     padding-bottom: 6px;
   }
-  @include media-mobilesmall {
+  @include media-mobile {
     @include font($size: 2.4rem, $height: 2.8rem);
-  }
-  @include media-mobilesmall{
     padding-top: 31px;
     padding-left: 0;
   }
+  
 }
 
 .backstage__subtitle {
@@ -87,7 +86,7 @@
     padding-bottom: 4px;
     padding-left: 5px;
   }
-  @include media-mobilesmall {
+  @include media-mobile {
     padding-top: 6px;
     padding-bottom: 8px;
     padding-left: 1px;
@@ -99,7 +98,7 @@
   @include media-laptop {
     padding-top: 0;
   }
-  @include media-mobilesmall{
+  @include media-mobile{
     p{
       margin-top: 3px;
     }
@@ -108,8 +107,11 @@
 
 .backstage__button {
   display: none;
-  @include media-mobilesmall{
+  @include media-add-tablet{
     display: block;
-    padding: 16px 88px 19px 94px;
+    padding: 0;
+    width: 296px;
+    height: 57px;
+    margin-bottom: 10px;
   }
 }

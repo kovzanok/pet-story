@@ -6,7 +6,7 @@
       padding-left: 0;
       padding-right: 0;
     }
-    @include media-mobilesmall {
+    @include media-pick {
       padding-left: 10px;
       padding-right: 10px;
     }
@@ -20,7 +20,7 @@
     padding-top: 30px;
     padding-bottom: 49px;
   }
-  @include media-laptop {
+  @include media-tablet {
     padding-top: 20px;
     padding-bottom: 18px;
   }
@@ -41,7 +41,7 @@
     padding-top: 9px;
     padding-left: 21px;
   }
-  @include media-mobilesmall {
+  @include media-pick {
     padding-top: 19px;
     padding-left: 9px;
   }
@@ -58,7 +58,7 @@
     @include font($size: 4.2rem, $height: 5rem);
     width: 97%;
   }
-  @include media-mobilesmall {
+  @include media-pick {
     @include font($size: 2.4rem, $height: 2.8rem);
   }
 }
@@ -72,7 +72,7 @@
   @include media-tablet {
     @include font($size: 2.2rem, $height: 2.6rem);
   }
-  @include media-mobilesmall {
+  @include media-pick {
     @include font($size: 1.8rem, $height: 2.2rem);
     margin-top: 12px;
     text-align: center;
@@ -89,7 +89,7 @@
     padding-right: 16px;
     margin-bottom: 11px;
   }
-  @include media-mobilesmall {
+  @include media-pick {
     display: none;
   }
 }
@@ -103,7 +103,7 @@
   @include media-tablet {
     width: 100%;
   }
-  @include media-mobilesmall {
+  @include media-pick {
     display: none;
   }
 }
@@ -140,7 +140,7 @@
     padding-top: 30px;
     width: 97%;
   }
-  @include media-mobilesmall {
+  @include media-pick {
     @include font($size: 2.4rem, $height: 2.8rem);
     padding-top: 0;
   }
@@ -157,23 +157,19 @@
       margin-top: 20px;
     }
   }
-  @include media-mobilesmall {
+  @include media-pick {
     @include columns($width: 100%);
-    >.pick__procedure:first-child{
+    > .pick__procedure:first-child {
       margin-top: 20px;
     }
-    >.pick__procedure{
+    > .pick__procedure {
       margin-top: 41px;
     }
-    >.pick__procedure:last-child{
+    > .pick__procedure:last-child {
       margin-top: 31px;
     }
   }
-
-  
 }
-
-
 
 .procedure__image-wrapper {
   background: $color-prim;
@@ -181,7 +177,7 @@
   height: 168px;
   padding: 1px;
   border-radius: 5px;
-  @include media-mobilesmall {
+  @include media-pick {
     margin: 0 auto;
   }
 }
@@ -209,7 +205,7 @@
 .procedure__name {
   @include font($size: 1.6rem, $height: 2.2rem);
   margin-top: 30px;
-  @include media-mobilesmall {
+  @include media-pick {
     margin-top: 10px;
     margin-left: 22%;
     width: 58%;
@@ -228,7 +224,7 @@
     padding-top: 42px;
     padding-bottom: 62px;
   }
-  @include media-mobilesmall{
+  @include media-pick {
     padding-bottom: 38px;
   }
 }
@@ -258,19 +254,17 @@
       left: 55%;
     }
   }
-  @include media-mobilesmall{
+  @include media-pick {
     width: 82px;
     height: 26px;
     right: 0;
     left: 70%;
-    transform:  rotate(90deg);
+    transform: rotate(90deg);
     &_first {
       top: 30%;
-      
     }
     &_second {
       top: 63%;
-      
     }
   }
 }

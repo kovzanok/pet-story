@@ -41,6 +41,26 @@
   @media (max-width: $navigation-breakpoint){@content;}
 }
 
+@mixin media-add-tablet{
+  @media (max-width: $tablet-breakpoint){@content;}
+}
+
+@mixin media-mobile{
+  @media (max-width: $mobile-big-width){@content;}
+}
+
+@mixin media-mobile-width{
+  @media (max-width: $mobile-width){@content;}
+}
+
+@mixin media-pick{
+  @media (max-width: $pick-breakpoint){@content;}
+}
+
+@mixin media-pets{
+  @media (max-width: $pets-breakpoint){@content;}
+}
+
 @mixin media-mobilesmall{
   @media (max-width: $mobile-small-width){@content;}
 }

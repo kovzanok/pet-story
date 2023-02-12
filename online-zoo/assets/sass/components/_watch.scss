@@ -98,7 +98,7 @@
     left: -101px;
     bottom: -7px;
   }
-  @include media-mobilesmall{
+  @include media-add-tablet{
     display: none;
   }
 }

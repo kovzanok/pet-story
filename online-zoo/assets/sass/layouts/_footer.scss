@@ -11,7 +11,7 @@
     padding-top: 13px;
     padding-bottom: 118px;
   }
-  @include media-mobilesmall {
+  @include media-add-tablet {
     padding-top: 21px;
     padding-bottom: 75px;
   }
@@ -22,7 +22,7 @@
     flex-basis: 50%;
     position: relative;
   }
-  @include media-mobilesmall {
+  @include media-add-tablet {
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
@@ -30,17 +30,19 @@
 }
 
 .footer__logo {
-  @include media-mobilesmall {
+  
+  @include media-add-tablet {
+    width: 100%;
+    text-align: center;
     padding: 0;
     .logo {
-      display: inline-block;
-      width: 100%;
+      
       border: 0;
       padding: 0;
     }
     .logo__icon {
-      bottom: 5px;
-      left: 158px;
+      bottom: 2px;
+      left: 80px;
     }
   }
 }
@@ -50,15 +52,19 @@
   @include media-navigation {
     padding-top: 35px;
   }
-  @include media-mobilesmall {
+  @include media-add-tablet {
     order: 3;
     padding-top: 9px;
+    text-align: center;
   }
+  
 }
 
 .footer__button {
-  padding: 14px 50px 19px 49px;
+  width: 298px;
+  height: 54px;
   border-radius: 5px;
+  padding: 0;
 }
 
 .socials {
@@ -76,7 +82,7 @@
       margin-top: 13px;
     }
   }
-  @include media-mobilesmall {
+  @include media-add-tablet {
     position: static;
     flex-direction: row;
     order: 2;
@@ -141,7 +147,7 @@
   @include media-navigation {
     flex-direction: column-reverse;
   }
-  @include media-mobilesmall{
+  @include media-add-tablet{
     flex-basis: 100%;
     
   }
@@ -176,7 +182,7 @@
     top: 105px;
     margin-bottom: 0px;
   }
-  @include media-mobilesmall{
+  @include media-add-tablet{
     top: 8px;
   }
 }

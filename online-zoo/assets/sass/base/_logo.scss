@@ -7,6 +7,9 @@
   text-align: center;
   padding: 2px 5px;
   color: $color-light;
+  @include media-add-tablet{
+    width: 140px;
+  }
 }
 
 .logo__title {

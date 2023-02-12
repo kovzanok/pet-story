@@ -23,6 +23,9 @@
     max-width: 825px;
     padding-bottom: 45px;
   }
+  @include media-navigation{
+    padding-top: 34px;
+  }
   @include media-tablet {
     padding-bottom: 46px;
   }

@@ -1,4 +1,4 @@
-.menu, .menu__wrapper, .hamburger__line, .hamburger::after, .hamburger::before, .pets__card:hover .card__image, .link {
+.menu, .menu__wrapper, .layout-4-columns, .hamburger__line, .hamburger::after, .hamburger::before, .pets__card:hover .card__image, .link {
   transition: all 0.3s ease-out;
 }
 
@@ -1313,6 +1313,11 @@ ul {
     padding-bottom: 45px;
   }
 }
+@media (max-width: 700px) {
+  .watch__wrapper {
+    padding-top: 34px;
+  }
+}
 @media (max-width: 640px) {
   .watch__wrapper {
     padding-bottom: 46px;
@@ -2191,6 +2196,27 @@ ul {
   }
 }
 
+.carousel__container {
+  margin: 0 auto;
+  overflow: auto;
+  scroll-behavior: hidden;
+  overflow: hidden;
+}
+.carousel__container::-webkit-scrollbar {
+  height: 0;
+}
+@media (max-width: 1160px) {
+  .carousel__container {
+    width: 866px;
+  }
+}
+@media (max-width: 860px) {
+  .carousel__container {
+    width: 100%;
+    height: 390px;
+  }
+}
+
 .testimonials__title {
   font-size: 3.6rem;
   font-style: normal;
@@ -2217,7 +2243,7 @@ ul {
     padding-top: 19px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 860px) {
   .testimonials__progress-bar {
     display: none;
   }
@@ -2716,30 +2742,21 @@ ul {
 }
 
 .layout-4-columns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
+  display: grid;
+  grid-gap: 0 28px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-flow: column;
   padding-top: 44px;
-}
-.layout-4-columns > * {
-  flex-basis: 23%;
 }
 @media (max-width: 1160px) {
   .layout-4-columns {
-    padding-top: 33px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .layout-4-columns > * {
-    flex-basis: 31%;
-  }
-  .layout-4-columns > .testimonial__wrapper:last-child {
-    display: none;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 @media (max-width: 860px) {
   .layout-4-columns {
+    padding-top: 32px;
     flex-direction: column;
     display: flex;
     flex-wrap: wrap;
@@ -2749,7 +2766,7 @@ ul {
     flex-basis: 100%;
   }
   .layout-4-columns > .testimonial__wrapper:nth-child(2),
-  .layout-4-columns :nth-child(3) {
+  .layout-4-columns :nth-child(3), .layout-4-columns :nth-child(4) {
     margin-top: 16px;
   }
 }

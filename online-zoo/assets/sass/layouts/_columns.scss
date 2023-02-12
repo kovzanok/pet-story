@@ -1,12 +1,11 @@
 .layout-2-columns {
   @extend %columns;
   height: 100%;
-  
 }
 
 .layout-2-columns-footer {
   @include columns($width: 31.6%);
-  @include media-mobilesmall{
+  @include media-mobilesmall {
     @include columns($width: 100%);
   }
 }
@@ -57,24 +56,28 @@
 }
 
 .layout-4-columns {
-  @include columns($width: 23%);
-  padding-top: 44px;
-  @include media-laptop {
-    padding-top: 33px;
-    @include columns($width: 31%);
-    > .testimonial__wrapper:last-child {
-      display: none;
-    }
+  position: relative;
+  display: grid;
+  grid-gap: 0 28px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  @include media-laptop{
+    grid-template-columns: 1fr 1fr 1fr;
   }
+  grid-auto-flow: column;
+  padding-top: 44px;
+  @extend %transition;
+  
+  
   @include media-testimonial {
+    padding-top: 32px;
     flex-direction: column;
     @include columns($width: 100%);
     > .testimonial__wrapper:nth-child(2),
-    :nth-child(3) {
+    :nth-child(3),:nth-child(4) {
       margin-top: 16px;
     }
   }
-  @include media-mobilesmall{
+  @include media-mobilesmall {
     padding-top: 19px;
   }
 }
@@ -85,5 +88,4 @@
   @include media-navigation {
     max-width: 568px;
   }
-  
 }

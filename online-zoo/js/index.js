@@ -33,7 +33,7 @@ const testimonialsClickHandler = (e) => {
     const testimonial = e.target.closest(".testimonial__wrapper");
     const testimonialInfo = getTestimonialInfo(testimonial);
     const modal = generateModal(testimonialInfo);
-    addTestimonialProfilePic(modal,testimonialInfo.pic);
+    addTestimonialProfilePic(modal, testimonialInfo.pic);
     addModalToDocument(modal);
     modal.addEventListener("click", modalClickHandler);
   }
@@ -100,10 +100,9 @@ const addTestimonialProfilePic = (modal, picUrl) => {
 };
 
 const modalClickHandler = function (e) {
-  
   if (
     e.target.classList.contains("modal__wrapper") ||
-    e.target.classList.contains("modal__close-button")||
+    e.target.classList.contains("modal__close-button") ||
     e.target.classList.contains("modal__body")
   ) {
     closeModal(this);
@@ -112,6 +111,24 @@ const modalClickHandler = function (e) {
 
 menuButton.addEventListener("click", menuButtonClickHandler);
 if (window.innerWidth <= 860) {
-  const testimonialsList = document.querySelector(".layout-4-columns");
+  const testimonialsList = document.querySelector(".carousel__container");
   testimonialsList.addEventListener("click", testimonialsClickHandler);
 }
+
+if (window.innerWidth <= 1160 && window.innerWidth > 860) {
+  document.querySelector(".progress-bar__wrapper input").max = 8;
+}
+
+const progressBarHandler = function (e) {
+  const layout = document.querySelector(".layout-4-columns");
+  if (this.value >= 3) {
+    layout.style.right =
+      this.value * 264 + 30 * this.value + 2 * this.value + "px";
+  } else {
+    layout.style.right = this.value * 264 + 30 * this.value + "px";
+  }
+};
+
+const progressBar = document.querySelector(".progress-bar__wrapper input");
+document.querySelector(".layout-4-columns").style.right = 0 + "px";
+progressBar.addEventListener("input", progressBarHandler);

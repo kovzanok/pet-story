@@ -758,6 +758,11 @@ ul {
   }
 }
 
+.feeding-range__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .feeding-range__title {
   font-size: 1.6rem;
   font-style: normal;
@@ -790,6 +795,8 @@ ul {
   background-color: #404950;
   padding: 0 18px 0 17px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 @media (max-width: 1160px) {
@@ -805,68 +812,87 @@ ul {
 @media (max-width: 425px) {
   .feeding-range__range {
     height: 13.5px;
-    padding: 0 18px;
+    padding: 0 10px;
   }
 }
 
 .range__line {
+  position: relative;
+  z-index: 1;
   height: 2px;
-  width: 100%;
+  width: 97%;
   background-color: #72828E;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .range__line_hidden {
+  position: relative;
+  z-index: 3;
+  width: 100%;
   background-color: #404950;
 }
-.range__line_active {
-  width: 76%;
-  position: absolute;
-  z-index: 1;
-  left: 12%;
-}
 @media (max-width: 1160px) {
+  .range__line_hidden > .range__circle:first-child {
+    display: none;
+  }
+}
+@media (max-width: 860px) {
+  .range__line_hidden .range__circle:nth-child(2),
+  .range__line_hidden :nth-child(3) {
+    display: none;
+  }
+}
+.range__line_active {
+  top: -1px;
+}
+@media (max-width: 860px) {
   .range__line_active {
-    width: 83%;
-    left: 8%;
+    width: 95%;
+  }
+}
+@media (max-width: 425px) {
+  .range__line_active {
+    width: 94%;
   }
 }
 
 .range__circle {
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-position: center;
-  background-color: #FFEE2E;
   cursor: pointer;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-}
-@media (max-width: 425px) {
-  .range__circle {
-    width: 5px;
-    height: 5px;
-  }
-}
-@media (max-width: 1160px) {
-  .range__circle:first-child {
-    display: none;
-  }
-}
-@media (max-width: 860px) {
-  .range__circle:nth-child(2),
-  .range__circle :nth-child(3),
-  .range__circle :nth-child(4) {
-    display: none;
-  }
-}
-@media (max-width: 860px) {
-  .range__circle:nth-child(3) {
-    display: none;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .range__circle:hover .range__circle_inner {
   background-color: #4b9200;
+}
+.range__circle_active {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 40px;
+  background-image: url("../icons/active-circle.png");
+}
+.range__circle_inner {
+  width: 10px;
+  height: 10px;
+  background-position: center;
+  background-color: #FFEE2E;
+}
+@media (max-width: 425px) {
+  .range__circle {
+    width: 20px;
+    height: 20px;
+  }
+  .range__circle_inner {
+    width: 5px;
+    height: 5px;
+  }
+  .range__circle_active {
+    background-size: 20px 20px;
+  }
 }
 
 .feeding-range__amount {
@@ -2587,7 +2613,7 @@ ul {
 }
 
 .donation-info__feeding-range {
-  padding: 0px 17px;
+  padding: 0px 93px;
 }
 @media (max-width: 640px) {
   .donation-info__feeding-range {

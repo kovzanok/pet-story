@@ -121,7 +121,63 @@ const progressBarHandler = function (e) {
   }
 };
 
+const feedingRange = document.querySelector(".feeding-range__range ");
+const inputForm = document.querySelector(".feed-form__input");
+
+const circleList = [...document.querySelectorAll(".range__circle_outer")];
+const amountList = [...document.querySelectorAll(".amount__money")].map(
+  (amountElement) => +amountElement.textContent.slice(1)
+);
+
+const makeCircleActive = (circle) => {
+  circle.classList.add("range__circle_active");
+};
+
+const makePreviousCircleNonactive = () => {
+  const activeCircle=document
+  .querySelector(".range__circle_active");
+  if (activeCircle){
+    activeCircle.classList.remove("range__circle_active");
+  }
+    
+};
+
+const putAmountInForm = (circle) => {
+  const number = circleList.indexOf(circle);
+
+  inputForm.value = amountList[number];
+};
+
+const feedingRangeClickHandler = (e) => {
+  if (e.target.classList.contains("range__circle")) {
+    const clickedCircle = e.target.closest(".range__circle_outer");
+    makePreviousCircleNonactive();
+    makeCircleActive(clickedCircle);
+    putAmountInForm(clickedCircle);
+  }
+};
+
+const inputHandler = function (e) {
+  if (amountList.includes(+this.value)) {
+    const number = amountList.indexOf(+this.value);
+    makePreviousCircleNonactive();
+    makeCircleActive(circleList[number]);
+  } else {
+    makePreviousCircleNonactive();
+  }
+};
+
+const validateAmount = function () {
+  const max = 9999;
+  if (this.value > 9999) {
+    this.value = max;
+  }
+};
+
 if (document.querySelector(".panda")) {
+  feedingRange.addEventListener("click", feedingRangeClickHandler);
+  inputForm.addEventListener("change", inputHandler);
+  inputForm.addEventListener("input", validateAmount);
 } else {
   if (window.innerWidth <= 860) {
     const testimonialsList = document.querySelector(".carousel__container");

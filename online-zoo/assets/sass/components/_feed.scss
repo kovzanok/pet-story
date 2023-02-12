@@ -221,10 +221,12 @@
 }
 
 .donation-info__feeding-range {
-  padding: 0px 17px;
+  padding: 0px 93px;
+  
   @include media-tablet {
     padding: 0;
   }
+  
 }
 
 .donation-info__form {

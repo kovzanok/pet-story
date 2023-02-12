@@ -1,3 +1,8 @@
+.feeding-range__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .feeding-range__title {
   @include font($size: 1.6rem, $height: 2.2rem);
   padding: 0 5px 18px;
@@ -21,6 +26,8 @@
   background-color: $color-feed-range;
   padding: 0 18px 0 17px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   @include media-laptop {
     padding: 0 9px 0 10px;
@@ -30,67 +37,87 @@
   }
   @include media-mobile-width {
     height: 13.5px;
-    padding: 0 18px;
+    padding: 0 10px;
   }
 }
 
 .range__line {
+  position: relative;
+  z-index: 1;
   height: 2px;
-  width: 100%;
+  width: 97%;
   background-color: $color-range-line;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   &_hidden {
+    position: relative;
+    z-index: 3;
+    width: 100%;
     background-color: $color-feed-range;
+    @include media-laptop {
+      > .range__circle:first-child {
+        display: none;
+      }
+    }
+    @include media-testimonial {
+      .range__circle:nth-child(2),
+      :nth-child(3) {
+        display: none;
+      }
+    }
   }
 
   &_active {
-    width: 76%;
-    position: absolute;
-    z-index: 1;
-    left: 12%;
-    @include media-laptop {
-      width: 83%;
-      left: 8%;
+    top: -1px;
+    @include media-testimonial {
+      width: 95%;
+    }
+    @include media-mobile-width {
+      width: 94%;
     }
   }
 }
 
 .range__circle {
-  @include media-mobile-width {
-    width: 5px;
-    height: 5px;
-  }
-  &:first-child {
-    @include media-laptop {
-      display: none;
-    }
-  }
-  &:nth-child(2),
-  :nth-child(3),
-  :nth-child(4) {
-    @include media-testimonial {
-      display: none;
-    }
-  }
-  &:nth-child(3) {
-    @include media-testimonial {
-      display: none;
-    }
-  }
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-position: center;
-  background-color: $color-range-circle;
   cursor: pointer;
-  display: inline-block;
-  width: 10px;
-  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     .range__circle_inner {
       background-color: $color-active;
+    }
+  }
+
+  &_active {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px 40px;
+    background-image: url("../icons/active-circle.png");
+  }
+
+  &_inner {
+    width: 10px;
+    height: 10px;
+    background-position: center;
+    background-color: $color-range-circle;
+  }
+
+  @include media-mobile-width {
+    width: 20px;
+    height: 20px;
+    &_inner {
+      width: 5px;
+      height: 5px;
+    }
+    &_active {
+      background-size: 20px 20px;
     }
   }
 }
@@ -101,9 +128,9 @@
   > * {
     flex-basis: 12.5%;
   }
-  @include media-mobile-width{
+  @include media-mobile-width {
     margin-top: 5px;
-    >*{
+    > * {
       flex-basis: 10%;
     }
   }

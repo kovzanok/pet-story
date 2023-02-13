@@ -16,10 +16,18 @@
 }
 
 .layout-3-columns {
+  
   @include columns($width: 31.6%);
   > * {
     margin-top: 18px;
   }
+
+
+  &_active,&_next{
+    display: block;
+  }
+
+
   @include media-add-laptop {
     @include columns($width: 31.4%);
     > .pets__card-wrapper:nth-child(4),

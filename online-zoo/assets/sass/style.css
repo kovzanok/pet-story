@@ -1305,6 +1305,56 @@ ul {
   margin-bottom: 0;
 }
 
+.item__container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.item {
+  display: none;
+  position: relative;
+  animation: 0.5s ease-in-out;
+}
+.item_active, .item_next {
+  display: block;
+}
+.item_next {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.item_to-left {
+  animation-name: left;
+}
+.item_to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+.item_from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+.item_from-right {
+  animation-name: right;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
 .watch {
   background-image: url("../img/background-panda.jpg");
   background-position: bottom;
@@ -2713,6 +2763,9 @@ ul {
 }
 .layout-3-columns > * {
   margin-top: 18px;
+}
+.layout-3-columns_active, .layout-3-columns_next {
+  display: block;
 }
 @media (max-width: 1560px) {
   .layout-3-columns {

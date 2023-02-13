@@ -112,7 +112,6 @@ const modalClickHandler = function (e) {
 menuButton.addEventListener("click", menuButtonClickHandler);
 
 const progressBarHandler = function (e) {
-  const layout = document.querySelector(".layout-4-columns");
   if (this.value >= 3) {
     layout.style.right =
       this.value * 264 + 30 * this.value + 2 * this.value + "px";
@@ -134,12 +133,10 @@ const makeCircleActive = (circle) => {
 };
 
 const makePreviousCircleNonactive = () => {
-  const activeCircle=document
-  .querySelector(".range__circle_active");
-  if (activeCircle){
+  const activeCircle = document.querySelector(".range__circle_active");
+  if (activeCircle) {
     activeCircle.classList.remove("range__circle_active");
   }
-    
 };
 
 const putAmountInForm = (circle) => {
@@ -168,11 +165,104 @@ const inputHandler = function (e) {
 };
 
 const validateAmount = function () {
-  const max = 9999;
-  if (this.value > 9999) {
-    this.value = max;
+  if (this.value.length > 4) {
+    this.value = this.value.slice(0, 4);
   }
 };
+
+const generatePetCard = (info) => {
+  const petCard = document.createElement("DIV");
+  petCard.classList.add("pets__card-wrapper");
+  const petCardInnerHTML = `<div class="pets__card">
+  <div class="card__image"></div>
+  <div class="card__text card__text_hidden">
+    <h5 class="card__title">${info.name}</h5>
+    <p class="card__country">${info.location}</p>
+  </div>
+  <div class="card__info">
+    <div class="card__text">
+      <h5 class="card__title">${info.name}</h5>
+      <p class="card__country">${info.location}</p>
+    </div>
+    <div class="card__food card__food_${info.food}"></div>
+  </div>
+</div>`;
+  petCard.innerHTML = petCardInnerHTML;
+  petCard.querySelector(".card__image").style.backgroundImage = info.pic;
+
+  return petCard;
+};
+
+const getRandomPetsNumbers = () => {
+  const petsAmount = window.innerWidth <= 700 ? 4 : 6;
+  const randomNums = [];
+
+  while (randomNums.length !== petsAmount) {
+    const randomNum = Math.floor(Math.random() * petInfo.length);
+    if (!randomNums.includes(randomNum)) {
+      randomNums.push(randomNum);
+    }
+  }
+
+  return randomNums;
+};
+
+const generateRandomSlider = () => {
+  const numbers = getRandomPetsNumbers();
+  const petsLayout=document.querySelector('.item_next').querySelector('.layout-3-columns');
+  petsLayout.innerHTML=''
+  numbers.forEach(number=>{
+    petsLayout.append(generatePetCard(petInfo[number]));
+  })
+  
+};
+
+const petInfo = [
+  {
+    name: "giant Pandas",
+    location: "Native to Southwest China",
+    food: "fruits",
+    pic: 'url("../../assets/img/panda.png")',
+  },
+  {
+    name: "Eagles",
+    location: "Native to South America",
+    food: "meat",
+    pic: 'url("../../assets/img/eagle.png")',
+  },
+  {
+    name: "Gorillas",
+    location: "Native to Congo",
+    food: "fruits",
+    pic: 'url("../../assets/img/gorilla.png")',
+  },
+  {
+    name: "Two-toed Sloth",
+    location: "Mesoamerica, South America",
+    food: "fruits",
+    pic: 'url("../../assets/img/sloth.png")',
+  },
+  {
+    name: "cheetahs",
+    location: "Native to Africa",
+    food: "meat",
+    pic: 'url("../../assets/img/cheetah.png")',
+  },
+  {
+    name: "Penguins",
+    location: "Native to Antarctica",
+    food: "meat",
+    pic: 'url("../../assets/img/penguin.png")',
+  },
+  {
+    name: "Alligators",
+    location: "Native to Southeastern U. S.",
+    food: "meat",
+    pic: 'url("../../assets/img/alligator.png")',
+  },
+];
+
+const layout = document.querySelector(".layout-4-columns");
 
 if (document.querySelector(".panda")) {
   feedingRange.addEventListener("click", feedingRangeClickHandler);
@@ -185,11 +275,71 @@ if (document.querySelector(".panda")) {
   }
 
   const progressBar = document.querySelector(".progress-bar__wrapper input");
+  
 
   if (window.innerWidth <= 1160 && window.innerWidth > 860) {
     document.querySelector(".progress-bar__wrapper input").max = 8;
   }
 
-  progressBar.style.right = 0 + "px";
+  
+
+  layout.style.right = 0 + "px";
   progressBar.addEventListener("input", progressBarHandler);
+
+  const items = document.querySelectorAll(".item");
+  const leftButton = document.querySelector(".slider-button_left");
+  const rightButton = document.querySelector(".slider-button_right");
+
+  let currentItem = 0;
+  let isEnable = true;
+
+  const changeCurrentItem = function (n) {
+    currentItem = (n + items.length) % items.length;
+  };
+
+  const hideItem = function (direction) {
+    isEnable = false;
+    items[currentItem].classList.add("item" + direction);
+    items[currentItem].addEventListener("animationend", function () {
+      this.classList.remove("item_active", "item" + direction);
+    });
+  };
+
+  const showItem = function (direction) {
+    items[currentItem].classList.add("item_next", "item" + direction);
+    generateRandomSlider();
+    items[currentItem].addEventListener("animationend", function () {
+      this.classList.remove("item_next", "item" + direction);
+      this.classList.add("item_active");
+      isEnable = true;
+    });
+  };
+
+  const previousItem = function (n) {
+    hideItem("_to-right");
+    changeCurrentItem(n - 1);
+    showItem("_from-left");
+  };
+
+  const nextItem = function (n) {
+    hideItem("_to-left");
+    changeCurrentItem(n + 1);
+    showItem("_from-right");
+  };
+
+  leftButton.addEventListener("click", function () {
+    if (isEnable) {
+      
+      previousItem(currentItem);
+    }
+  });
+
+  rightButton.addEventListener("click", function () {
+    if (isEnable) {
+      
+      nextItem(currentItem);
+    }
+  });
 }
+
+

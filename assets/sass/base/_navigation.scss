@@ -1,0 +1,39 @@
+.navigation {
+  @include font($size: 1.6rem, $height: 2.2rem, $weight: 500);
+  display: flex;
+}
+
+.navigation__item {
+  margin: 0 29px;
+  @include media-laptop {
+    margin: 0 25px;
+  }
+  @include media-navigation {
+    margin: 0 20px;
+  }
+  @include media-mobilesmall{
+    margin: 0 16px;
+  }
+}
+
+.navigation__link {
+  &_active {
+    cursor: default;
+    color: $color-link;
+  }
+}
+
+
+.burger__logo{
+  .logo{
+    color: $color-pick-title;
+    border-color: $color-pick-title;
+    width: 76px;
+    @include font($size: 1.5rem,$height: 1.8rem);
+    padding: 0;
+  }
+
+  .logo__icon{
+    left: 9px;
+  }
+}

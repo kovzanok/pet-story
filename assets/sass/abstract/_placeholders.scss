@@ -1,0 +1,18 @@
+%transition {
+  transition: all 0.3s ease-out;
+}
+
+%slow-transition {
+  transition: all 0.8s ease-out;
+}
+
+%columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+%pick__content-background {
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+}

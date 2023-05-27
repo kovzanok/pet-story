@@ -1,0 +1,73 @@
+$color-prim: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+$color-pick-background: linear-gradient(
+    315.75deg,
+    rgba(254, 210, 144, 0.7) 30.06%,
+    #febdab 100.95%,
+    rgba(254, 210, 144, 0.7) 106.36%
+  ),
+  linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  ),
+  linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  );
+$color-testimonial-border: linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  ),
+  linear-gradient(
+    315.75deg,
+    rgba(254, 189, 171, 0.74) 30.06%,
+    rgba(243, 169, 248, 0.66) 50.74%,
+    #e0d8f0 80.49%,
+    #eaf7fe 127.9%,
+    #eaf7fe 149.54%
+  );
+$color-testimonial-background: #f1f3f2;
+$color-testimonial-comment: gray;
+$color-person-info: #bdbdbd;
+$color-link: #ffa500;
+$color-text: #333b41;
+$color-pick-title: #fe9013;
+$color-text-highlight: #ffee2e;
+$color-footer: #111115;
+$color-header: black;
+$color-light: #ffffff;
+$color-hover: #e47209;
+$color-active: #4b9200;
+$color-invalid: #D31414;
+$color-default: #333B41;
+$color-feed-range: #404950;
+$color-range-line: #72828E;
+$color-range-circle:#FFEE2E;
+$color-feed-form-border: #929699;
+$color-submit-background:#F1F3F2;
+$color-socials: rgba(196, 196, 196, 0.5);
+$color-modal: #F5F7F6;
+
+
+$content-width: 1160px;
+$laptop-breakpoint: 1560px;
+$testimonial-breakpoint: 860px;
+$navigation-breakpoint: 700px;
+$tablet-width: 640px;
+$tablet-breakpoint: 639px;
+$mobile-big-width: 485px;
+$mobile-width: 425px;
+$mobile-small-width: 320px;
+$pick-breakpoint: 580px;
+$pets-breakpoint: 520px;

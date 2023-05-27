@@ -1,0 +1,112 @@
+.header {
+  background-color: $color-header;
+  color: $color-light;
+  position: relative;
+  z-index: 2;
+  @include media-navigation {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    width: 100%;
+  }
+  @include media-mobilesmall {
+    width: 320px;
+  }
+}
+
+.header__logo {
+  padding-top: 8px;
+  @include media-navigation {
+    padding: 0;
+    .logo {
+      width: 47px;
+      border: 0;
+      padding: 0;
+    }
+    .logo__title {
+      @include font($size: 1.2rem, $height: 1.5rem);
+    }
+    .logo__icon {
+      width: 5px;
+      left: 4px;
+    }
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 13px;
+  @include media-navigation {
+    padding-top: 3px;
+    padding-bottom: 0;
+    justify-content: space-between;
+  }
+}
+
+.header__nav {
+  padding-left: 34px;
+  padding-top: 7px;
+  @include media-navigation {
+    display: none;
+  }
+}
+
+.header__design {
+  @include font($size: 1.6rem, $height: 2.2rem, $weight: 500);
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  padding-left: 10px;
+  @include media-navigation {
+    display: none;
+  }
+}
+
+.menu__wrapper {
+  @extend %transition;
+
+  visibility: hidden;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  &_active {
+    position: fixed;
+    visibility: visible;
+    .menu {
+      left: 0;
+    }
+  }
+}
+
+.menu {
+  @extend %transition;
+  position: relative;
+  left: -100%;
+  width: 100%;
+  height: 329px;
+  background-color: $color-light;
+  @include font($size: 1.6rem, $height: 2.2rem);
+  color: $color-text;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.menu__nav {
+  margin-top: 30px;
+  > * {
+    margin: 0;
+  }
+  > .navigation__item {
+    margin-top: 15px;
+  }
+  > .navigation__item:first-child {
+    margin-top: 0px;
+  }
+}

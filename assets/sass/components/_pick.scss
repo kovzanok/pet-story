@@ -1,0 +1,270 @@
+.pick {
+  background: $color-pick-background;
+  color: $color-text;
+  .wrapper {
+    @include media-tablet {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @include media-pick {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}
+
+.pick__wrapper {
+  padding-top: 67px;
+  padding-bottom: 98px;
+  @include media-laptop {
+    padding-top: 30px;
+    padding-bottom: 49px;
+  }
+  @include media-tablet {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+}
+
+.pick__content {
+  @extend %pick__content-background;
+  border-radius: 20px;
+}
+.content__text {
+  padding-top: 41px;
+  padding-left: 99px;
+  @include media-laptop {
+    padding-top: 30px;
+    padding-left: 50px;
+  }
+  @include media-tablet {
+    padding-top: 9px;
+    padding-left: 21px;
+  }
+  @include media-pick {
+    padding-top: 19px;
+    padding-left: 9px;
+  }
+}
+.pick__title {
+  color: $color-pick-title;
+  @include font($size: 4.8rem, $height: 5.8rem);
+  text-align: center;
+  width: 91%;
+  @include media-laptop {
+    width: 94.3%;
+  }
+  @include media-tablet {
+    @include font($size: 4.2rem, $height: 5rem);
+    width: 97%;
+  }
+  @include media-pick {
+    @include font($size: 2.4rem, $height: 2.8rem);
+  }
+}
+
+.first-line {
+  @include font($size: 2.4rem, $height: 2.9rem);
+  margin: 32px 0px 39px;
+  @include media-laptop {
+    margin: 22px 0px 19px;
+  }
+  @include media-tablet {
+    @include font($size: 2.2rem, $height: 2.6rem);
+  }
+  @include media-pick {
+    @include font($size: 1.8rem, $height: 2.2rem);
+    margin-top: 12px;
+    text-align: center;
+    padding: 0 10px 0 0;
+  }
+}
+.second-line {
+  @include font($size: 1.6rem, $height: 2.1rem, $weight: 500);
+  margin-bottom: 9px;
+  @include media-laptop {
+    padding-right: 75px;
+  }
+  @include media-tablet {
+    padding-right: 16px;
+    margin-bottom: 11px;
+  }
+  @include media-pick {
+    display: none;
+  }
+}
+.third-line {
+  margin: 0;
+  @include font($size: 1.6rem, $height: 2.1rem, $weight: 400);
+  width: 82%;
+  @include media-laptop {
+    width: 90%;
+  }
+  @include media-tablet {
+    width: 100%;
+  }
+  @include media-pick {
+    display: none;
+  }
+}
+
+.pick__link {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 23px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: $color-pick-title;
+  }
+  @include media-laptop {
+    &::after {
+      top: 19px;
+    }
+  }
+}
+
+.pick__subtitle {
+  @include font($size: 3.6rem, $height: 4.7rem);
+  width: 90.3%;
+  padding-top: 62px;
+  text-align: center;
+  @include media-laptop {
+    width: 94%;
+    padding-top: 39px;
+  }
+  @include media-navigation {
+    padding-top: 30px;
+    width: 97%;
+  }
+  @include media-pick {
+    @include font($size: 2.4rem, $height: 2.8rem);
+    padding-top: 0;
+  }
+}
+
+.pick__layout-5-columns {
+  position: relative;
+  @include columns($width: 10%);
+  > * {
+    margin-top: 40px;
+  }
+  @include media-navigation {
+    > * {
+      margin-top: 20px;
+    }
+  }
+  @include media-pick {
+    @include columns($width: 100%);
+    > .pick__procedure:first-child {
+      margin-top: 20px;
+    }
+    > .pick__procedure {
+      margin-top: 41px;
+    }
+    > .pick__procedure:last-child {
+      margin-top: 31px;
+    }
+  }
+}
+
+.procedure__image-wrapper {
+  background: $color-prim;
+  width: 168px;
+  height: 168px;
+  padding: 1px;
+  border-radius: 5px;
+  @include media-pick {
+    margin: 0 auto;
+  }
+}
+
+.procedure__image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  &_background {
+    background-color: $color-light;
+  }
+  &_pay {
+    background-image: url("../icons/pay.png");
+  }
+  &_zoo {
+    background-image: url("../icons/zoo.png");
+  }
+  &_animal {
+    background-image: url("../icons/animal.png");
+  }
+}
+
+.procedure__name {
+  @include font($size: 1.6rem, $height: 2.2rem);
+  margin-top: 30px;
+  @include media-pick {
+    margin-top: 10px;
+    margin-left: 22%;
+    width: 58%;
+  }
+}
+
+.pick__button-block {
+  text-align: center;
+  padding-top: 62px;
+  padding-bottom: 59px;
+  @include media-laptop {
+    padding-top: 74px;
+    padding-bottom: 51px;
+  }
+  @include media-navigation {
+    padding-top: 42px;
+    padding-bottom: 62px;
+  }
+  @include media-pick {
+    padding-bottom: 38px;
+  }
+}
+
+.pick__button {
+  padding: 16px 72px 16px 74px;
+}
+
+.arrow {
+  height: 36px;
+  align-self: center;
+  margin: 0 0 48px;
+  @include media-laptop {
+    margin: 0 0 43px;
+  }
+  @include media-navigation {
+    position: absolute;
+    top: 0;
+
+    z-index: 2;
+    content: url("../icons/arrow-tablet.png");
+
+    &_first {
+      left: 20%;
+    }
+    &_second {
+      left: 55%;
+    }
+  }
+  @include media-pick {
+    width: 82px;
+    height: 26px;
+    right: 0;
+    left: 70%;
+    transform: rotate(90deg);
+    &_first {
+      top: 30%;
+    }
+    &_second {
+      top: 63%;
+    }
+  }
+}

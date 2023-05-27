@@ -1,0 +1,151 @@
+.pets {
+  position: relative;
+  .wrapper{
+    @include media-pets{
+      padding: 0 16px
+    }
+  }
+}
+
+.pets__wrapper {
+  position: relative;
+  z-index: 3;
+  padding-top: 98px;
+  padding-bottom: 101px;
+  @include media-laptop {
+    padding-bottom: 138px;
+  }
+  @include media-navigation {
+    padding-top: 22px;
+    padding-bottom: 99px;
+  }
+  @include media-pets{
+    padding-top: 14px;
+  }
+}
+
+.pets__card-wrapper {
+  background: $color-prim;
+  cursor: pointer;
+  max-width: 366px;
+  height: 426px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1px;
+
+  @include media-add-laptop {
+    height: 355px;
+    justify-content: space-between;
+  }
+  @include media-navigation {
+    height: 333px;
+  }
+}
+
+
+
+
+
+.pets__button-block {
+  display: flex;
+  justify-content: center;
+  padding-top: 81px;
+  @include media-navigation {
+    padding-top: 58px;
+  }
+  @include media-pets{
+    padding-top: 16px;
+    padding-bottom: 62px;
+  }
+}
+
+.pets__button {
+  padding: 16px 53px 16px 59px;
+  @include media-pets{
+    padding: 0;
+    width: 298px;
+    height: 54px;
+  }
+}
+
+.pets__slider-buttons {
+  position: absolute;
+  z-index: 3;
+  top: 518px;
+  width: 82.8%;
+  height: 62px;
+  left: 8.5%;
+  @include media-add-laptop {
+    top: 485px;
+    left: 35%;
+    width: 30%;
+  }
+  @include media-navigation {
+    top: 383px;
+    left: 38%;
+    width: 24%;
+  }
+  @include media-pets{
+    display: none;
+  }
+}
+
+.slider-button {
+  position: absolute;
+  width: 62px;
+  padding: 0;
+  height: 62px;
+  border-radius: 50%;
+
+  &_left {
+    left: 0;
+  }
+  &_right {
+    right: 0;
+  }
+}
+
+.pets__background-images {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 290px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  overflow: hidden;
+}
+
+.backgroound-images__palm {
+  position: absolute;
+  left: -150px;
+  bottom: 0;
+  height: 160%;
+  @include media-add-laptop {
+    left: 0;
+    height: auto;
+  }
+  @include media-navigation{
+    left: -60px;
+  }
+  @include media-pets{
+    height: 25%;
+    left: -10px;
+  }
+}
+
+.backgroound-images__flower {
+  position: absolute;
+
+  width: 23%;
+  right: 0;
+  bottom: 0;
+  @include media-navigation{
+    width: 28%;
+  }
+  @include media-pets{
+    right: -19px;
+  }
+}

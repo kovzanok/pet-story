@@ -1,0 +1,66 @@
+@mixin font($size, $height: $size, $weight: 400, $style: normal) {
+  font-size: $size;
+  font-style: $style;
+  font-weight: $weight;
+  line-height: $height;
+}
+
+@mixin columns($width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > * {
+    flex-basis: $width;
+  }
+}
+
+@mixin social-icon($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+@mixin media-laptop{
+  @media (max-width: $content-width){@content;}
+}
+
+@mixin media-add-laptop{
+  @media (max-width: $laptop-breakpoint){@content;}
+}
+
+@mixin media-tablet{
+  @media (max-width: $tablet-width){@content;}
+}
+
+@mixin media-testimonial{
+  @media (max-width: $testimonial-breakpoint){@content;}
+}
+
+@mixin media-navigation{
+  @media (max-width: $navigation-breakpoint){@content;}
+}
+
+@mixin media-add-tablet{
+  @media (max-width: $tablet-breakpoint){@content;}
+}
+
+@mixin media-mobile{
+  @media (max-width: $mobile-big-width){@content;}
+}
+
+@mixin media-mobile-width{
+  @media (max-width: $mobile-width){@content;}
+}
+
+@mixin media-pick{
+  @media (max-width: $pick-breakpoint){@content;}
+}
+
+@mixin media-pets{
+  @media (max-width: $pets-breakpoint){@content;}
+}
+
+@mixin media-mobilesmall{
+  @media (max-width: $mobile-small-width){@content;}
+}

@@ -1,0 +1,20 @@
+.panda {
+  width: 100%;
+  height: 388px;
+  background-image: url("../img/background-panda.jpg");
+  background-position: center;
+
+  @include media-laptop {
+    height: 392px;
+    background-position: left -167px top -193px;
+  }
+  @include media-tablet {
+    height: 369px;
+    background-position: left -365px top -216px;
+  }
+  @include  media-mobilesmall{
+    height: 221px;
+    background-position: left -128px top -59px;
+    background-size: 710px 375px;
+  }
+}

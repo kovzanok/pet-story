@@ -1,0 +1,91 @@
+.modal__wrapper {
+  position: fixed;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__body {
+  position: relative;
+  width: 320px;
+  height: 428px;
+
+  display: flex;
+  align-items: center;
+  padding-left: 17px;
+}
+
+.modal__close-button {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-image: url("../icons/close-button.png");
+}
+
+.modal__content {
+  .testimonial__wrapper {
+    background: $color-testimonial-border;
+    width: 268px;
+    height: 391px;
+    border-radius: 20px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .testimonial {
+    background: $color-testimonial-background;
+    border-radius: 20px;
+    height: 100%;
+    padding: 15px 13px 15px 15px;
+  }
+
+  .testimonial__profile {
+    display: flex;
+  }
+
+  .profile__pic {
+    width: 37px;
+    height: 37px;
+    background-image: url("../icons/user_icon.png");
+  }
+
+  .profile__info {
+    @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
+    padding-left: 8px;
+  }
+
+  .person-info {
+    color: $color-person-info;
+  }
+  .person-name {
+    @include font($size: 1.6rem, $height: 1.9rem);
+  }
+
+  .person-location {
+    padding-right: 6px;
+  }
+
+  .testimonial__comment {
+    height: 100%;
+    color: $color-testimonial-comment;
+    overflow: hidden;
+    height: 317px;
+    @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
+  }
+
+  .comment__paragraph {
+    margin-top: 10px;
+    margin-bottom: 0;
+    
+  }
+}

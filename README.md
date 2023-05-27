@@ -7,3 +7,4 @@
  - Slider
  - Modal window
  - Testimonial carousel
+ - Semantics
